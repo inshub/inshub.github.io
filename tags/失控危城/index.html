@@ -37,6 +37,9 @@
     <![endif]-->
     
     
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+    
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
     <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
@@ -103,11 +106,11 @@
                 
 				
 				<div class="post-list-item">
-					<div class="post-list-item-container bg-red">
-						<div class="item-label bg-blue">
+					<div class="post-list-item-container bg-purple">
+						<div class="item-label bg-purple">
 							<div class="item-title"><a href="/2018/09/07/mengmaijiudian/">孟买酒店</a></div>
 							<div class="item-meta clearfix">
-                                <div class="item-meta-ico bg-ico-code" style="background: url(/images/bg-ico.png) no-repeat;background-size: 40px auto;"></div>
+                                <div class="item-meta-ico bg-ico-image" style="background: url(/images/bg-ico.png) no-repeat;background-size: 40px auto;"></div>
 								<div class="item-meta-date"> Sep 07, 2018 </div>
 							</div>
 						</div>
@@ -147,7 +150,7 @@
                         <p id="chakhsu"></p>
                     	<p>Theme is <a href="https://github.com/cccyb/hexo-theme-pinghsu" target="_blank">Pinghsu</a> by <a href="https://m.wiredtiger.org" target="_blank">小H</a></p>
 						<p>Powered by <a href="https://hexo.io/" target="_blank" rel="nofollow">hexo</a></p>
-                        <p style="margin-top: 10px">站点总字数：16.5k</p>
+                        <p style="margin-top: 10px">站点总字数：13.5k</p>
                         
                        
                         
@@ -157,6 +160,9 @@
 				</div>
             </div>
             
+            
+            <div class="meta-item meta-comments">
+            </div>
             
 		</div>
 	</div>
@@ -230,6 +236,18 @@ MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
 
 <script src="/js/love.js"></script>
 
+
+<script>
+    new Valine({
+        el: '#vcomments',
+        appId: 'VM6rNlAdrDLbIOO8pfJJ7X7v-MdYXbMMI',
+        appKey: 'oz9Ay4H1SySRvkt0EBvq0sdD',
+        placeholder: 'Your commnet here. Be cool.' || 'Your commnet here. Be cool.',
+        avatar: 'mp' || 'mp',
+        pageSize: 10 || 10,
+        visitor: true,
+    })
+</script>
 
 
 <script>

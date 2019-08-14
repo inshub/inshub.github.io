@@ -37,6 +37,9 @@
     <![endif]-->
     
     
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+    
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
     <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
@@ -103,8 +106,14 @@
 			</div>
 			<div class="post-header-thumb-meta">
 				
+				<span id="/2018/09/07/mengmaijiudian/" class="leancloud-visitors" data-flag-title="孟买酒店">
+					<span class="leancloud-visitors-count">0</span> Views 
+				</span>
+				
 				<time datetime="1536283500" itemprop="datePublished">Published on Sep 07, 2018 in </time>
 				<a href="/categories/剧情/">剧情</a>
+				
+				with <a id="page-title-comment" href="#vcomments"></a>
 				
 				<!--
 				<div class="post-header-thumb-meta" style="font-size: 13px;">
@@ -135,7 +144,13 @@
 		</h1>
 		<div class="post-data">
 			
+			<span id="/2018/09/07/mengmaijiudian/" class="leancloud-visitors" data-flag-title="孟买酒店">
+				<span class="leancloud-visitors-count">0</span> Views 
+			</span>
+			
             <time datetime="1536283500" itemprop="datePublished">Published on Sep 07, 2018 in </time><a href="/categories/剧情/">剧情</a>
+			
+			with <a id="page-title-comment" href="#vcomments"></a>
 			
 			<div style="font-size: 13px;">
 				<span class="post-count">本文字数：132 字</span>
@@ -158,7 +173,7 @@
 <h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><blockquote>
 <p>　影片真实再现震惊世界的“印度9·11”孟买恐袭事件，2008年11月，著名的泰姬陵酒店意外遭到恐怖分子入侵，恐怖分子无差别行凶，让整个酒店陷入绝望之境，百余名酒店住客及员工被困，无人得知何时能等来救援，一场与死神的赛跑就此开启…</p>
 </blockquote>
-<h3 id="正片"><a href="#正片" class="headerlink" title="正片"></a>正片</h3><div id="dplayer33" class="dplayer hexo-tag-dplayer-mark" style="margin-bottom: 20px;"></div><script>(function(){var player = new DPlayer({"container":document.getElementById("dplayer33"),"loop":false,"screenshot":false,"video":{"url":"https://cn2.zuidadianying.com/20190608/3PinmsLN/index.m3u8"}});window.dplayers||(window.dplayers=[]);window.dplayers.push(player);})()</script>
+<h3 id="正片"><a href="#正片" class="headerlink" title="正片"></a>正片</h3><div id="dplayer38" class="dplayer hexo-tag-dplayer-mark" style="margin-bottom: 20px;"></div><script>(function(){var player = new DPlayer({"container":document.getElementById("dplayer38"),"loop":false,"screenshot":false,"video":{"url":"https://cn2.zuidadianying.com/20190608/3PinmsLN/index.m3u8"}});window.dplayers||(window.dplayers=[]);window.dplayers.push(player);})()</script>
 		
 		<div style="text-align: center; margin: 20px 0;">
 			<p>扫码领红包，支持一下！</p>
@@ -210,6 +225,10 @@
 
 
 
+<div class="comment-container">
+	<div id="vcomments"></div>
+</div>
+
 
 <footer id="footer" class="footer bg-white">
    
@@ -238,7 +257,7 @@
                         <p id="chakhsu"></p>
                     	<p>Theme is <a href="https://github.com/cccyb/hexo-theme-pinghsu" target="_blank">Pinghsu</a> by <a href="https://m.wiredtiger.org" target="_blank">小H</a></p>
 						<p>Powered by <a href="https://hexo.io/" target="_blank" rel="nofollow">hexo</a></p>
-                        <p style="margin-top: 10px">站点总字数：16.5k</p>
+                        <p style="margin-top: 10px">站点总字数：13.5k</p>
                         
                        
                         
@@ -248,6 +267,9 @@
 				</div>
             </div>
             
+            
+            <div class="meta-item meta-comments">
+            </div>
             
 		</div>
 	</div>
@@ -441,8 +463,32 @@ MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
 <script src="/js/love.js"></script>
 
 
+<script>
+    new Valine({
+        el: '#vcomments',
+        appId: 'VM6rNlAdrDLbIOO8pfJJ7X7v-MdYXbMMI',
+        appKey: 'oz9Ay4H1SySRvkt0EBvq0sdD',
+        placeholder: 'Your commnet here. Be cool.' || 'Your commnet here. Be cool.',
+        avatar: 'mp' || 'mp',
+        pageSize: 10 || 10,
+        visitor: true,
+    })
+</script>
+
 
 <script>
+
+// 获取文章评论数
+var query1 = new AV.Query('Comment');
+query1.equalTo('url', '/2018/09/07/mengmaijiudian/');
+query1.doesNotExist('pid');
+query1.count().then(function (count) {
+    document.getElementById('page-title-comment').innerText = count + ' comment';
+}, function (error) {
+    console.log(error.message);    
+}).catch(function (error) {
+    console.log(error.message);
+});
 
 
 

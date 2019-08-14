@@ -37,6 +37,9 @@
     <![endif]-->
     
     
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+    
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
     <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
@@ -103,8 +106,14 @@
 			</div>
 			<div class="post-header-thumb-meta">
 				
+				<span id="/1980/04/23/yingwuzhe/" class="leancloud-visitors" data-flag-title="影武者">
+					<span class="leancloud-visitors-count">0</span> Views 
+				</span>
+				
 				<time datetime="325267200" itemprop="datePublished">Published on Apr 23, 1980 in </time>
 				<a href="/categories/战争/">战争</a>
+				
+				with <a id="page-title-comment" href="#vcomments"></a>
 				
 				<!--
 				<div class="post-header-thumb-meta" style="font-size: 13px;">
@@ -133,7 +142,13 @@
 		</h1>
 		<div class="post-data">
 			
+			<span id="/1980/04/23/yingwuzhe/" class="leancloud-visitors" data-flag-title="影武者">
+				<span class="leancloud-visitors-count">0</span> Views 
+			</span>
+			
             <time datetime="325267200" itemprop="datePublished">Published on Apr 23, 1980 in </time><a href="/categories/战争/">战争</a>
+			
+			with <a id="page-title-comment" href="#vcomments"></a>
 			
 			<div style="font-size: 13px;">
 				<span class="post-count">本文字数：287 字</span>
@@ -154,7 +169,7 @@
 <h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><blockquote>
 <p>日本战国时代三雄之首的武田信玄（仲代达矢 饰），号称“甲斐之虎”。他的信条是“疾如风，徐如林，侵略如火，不动如山”。当武田信玄包围德川军的野田城，即将直取京都完成霸业时，他被敌人的狙击冷枪打中，重伤濒死。临死前，他留下遗言要部下隐瞒自己死讯三年。先前弟弟武田信廉（山崎努 饰）找到的替身（仲代达矢 饰），原为窃贼的他面貌和信玄酷似，即日本人所说的“影子武士”，担当起了重任。就这样，在武田信廉一旁的支持辅助下，影子武士从贼性未改到被武田家的大义之举所感动，尽心尽力履行职责，他令武田家人及敌人坚信他就是信玄本人。然而，三年将至，意外之事发生，影子武士被揭露，他被赶走，而武田家的气数也将尽……</p>
 </blockquote>
-<h3 id="正片"><a href="#正片" class="headerlink" title="正片"></a>正片</h3><div id="dplayer62" class="dplayer hexo-tag-dplayer-mark" style="margin-bottom: 20px;"></div><script>(function(){var player = new DPlayer({"container":document.getElementById("dplayer62"),"loop":false,"screenshot":false,"video":{"url":"https://hao.czybjz.com/ppvod/C885DC293917467AB30FD35C8F407BB4.m3u8"}});window.dplayers||(window.dplayers=[]);window.dplayers.push(player);})()</script>
+<h3 id="正片"><a href="#正片" class="headerlink" title="正片"></a>正片</h3><div id="dplayer59" class="dplayer hexo-tag-dplayer-mark" style="margin-bottom: 20px;"></div><script>(function(){var player = new DPlayer({"container":document.getElementById("dplayer59"),"loop":false,"screenshot":false,"video":{"url":"https://hao.czybjz.com/ppvod/C885DC293917467AB30FD35C8F407BB4.m3u8"}});window.dplayers||(window.dplayers=[]);window.dplayers.push(player);})()</script>
 
 		
 		<div style="text-align: center; margin: 20px 0;">
@@ -205,6 +220,10 @@
 
 
 
+<div class="comment-container">
+	<div id="vcomments"></div>
+</div>
+
 
 <footer id="footer" class="footer bg-white">
    
@@ -233,7 +252,7 @@
                         <p id="chakhsu"></p>
                     	<p>Theme is <a href="https://github.com/cccyb/hexo-theme-pinghsu" target="_blank">Pinghsu</a> by <a href="https://m.wiredtiger.org" target="_blank">小H</a></p>
 						<p>Powered by <a href="https://hexo.io/" target="_blank" rel="nofollow">hexo</a></p>
-                        <p style="margin-top: 10px">站点总字数：16.5k</p>
+                        <p style="margin-top: 10px">站点总字数：13.5k</p>
                         
                        
                         
@@ -243,6 +262,9 @@
 				</div>
             </div>
             
+            
+            <div class="meta-item meta-comments">
+            </div>
             
 		</div>
 	</div>
@@ -436,8 +458,32 @@ MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
 <script src="/js/love.js"></script>
 
 
+<script>
+    new Valine({
+        el: '#vcomments',
+        appId: 'VM6rNlAdrDLbIOO8pfJJ7X7v-MdYXbMMI',
+        appKey: 'oz9Ay4H1SySRvkt0EBvq0sdD',
+        placeholder: 'Your commnet here. Be cool.' || 'Your commnet here. Be cool.',
+        avatar: 'mp' || 'mp',
+        pageSize: 10 || 10,
+        visitor: true,
+    })
+</script>
+
 
 <script>
+
+// 获取文章评论数
+var query1 = new AV.Query('Comment');
+query1.equalTo('url', '/1980/04/23/yingwuzhe/');
+query1.doesNotExist('pid');
+query1.count().then(function (count) {
+    document.getElementById('page-title-comment').innerText = count + ' comment';
+}, function (error) {
+    console.log(error.message);    
+}).catch(function (error) {
+    console.log(error.message);
+});
 
 
 

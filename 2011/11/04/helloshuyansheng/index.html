@@ -37,6 +37,9 @@
     <![endif]-->
     
     
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+    
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
     <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
@@ -103,8 +106,14 @@
 			</div>
 			<div class="post-header-thumb-meta">
 				
+				<span id="/2011/11/04/helloshuyansheng/" class="leancloud-visitors" data-flag-title="Hello！树先生">
+					<span class="leancloud-visitors-count">0</span> Views 
+				</span>
+				
 				<time datetime="1320336000" itemprop="datePublished">Published on Nov 04, 2011 in </time>
 				<a href="/categories/喜剧/">喜剧</a>
+				
+				with <a id="page-title-comment" href="#vcomments"></a>
 				
 				<!--
 				<div class="post-header-thumb-meta" style="font-size: 13px;">
@@ -133,7 +142,13 @@
 		</h1>
 		<div class="post-data">
 			
+			<span id="/2011/11/04/helloshuyansheng/" class="leancloud-visitors" data-flag-title="Hello！树先生">
+				<span class="leancloud-visitors-count">0</span> Views 
+			</span>
+			
             <time datetime="1320336000" itemprop="datePublished">Published on Nov 04, 2011 in </time><a href="/categories/喜剧/">喜剧</a>
+			
+			with <a id="page-title-comment" href="#vcomments"></a>
 			
 			<div style="font-size: 13px;">
 				<span class="post-count">本文字数：305 字</span>
@@ -154,7 +169,7 @@
 <h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><blockquote>
 <p>树（王宝强 饰）的父亲亲手杀死了树的大哥，后来父亲去世了，但两人影像却时常浮现在他脑海。在汽修铺工作中，他开始眼花，后来出了工伤，住进医院，护士苹苹（何洁 饰）给他拆线时，厂长将他辞退了。他的家面临拆迁，因为村长小舅子在这开矿，他感到十分无助，没事在村里闲逛，与朋友喝酒， 没钱就向弟弟伸手。某天，他碰到了朋友的表妹张小梅（谭卓 饰），一见钟情。但在相亲中，他发现小梅是个聋哑女孩。然而，这并没有阻隔他们的爱情。朋友结婚，他卖力地张罗，却无意中得罪了村长的小舅子，受到侮辱。一气之下，他来到城里找朋帮忙。在朋友的奥校打工时，他见证了朋友搞婚外情的事实。他通过短信跟小梅传情，最终决定与她结婚。然而，这场婚礼却进行得异常艰难……</p>
 </blockquote>
-<h3 id="正片"><a href="#正片" class="headerlink" title="正片"></a>正片</h3><div id="dplayer19" class="dplayer hexo-tag-dplayer-mark" style="margin-bottom: 20px;"></div><script>(function(){var player = new DPlayer({"container":document.getElementById("dplayer19"),"loop":false,"screenshot":false,"video":{"url":"https://v-acfun.com/20180725/1159_66dc24a2/1000k/hls/index.m3u8"}});window.dplayers||(window.dplayers=[]);window.dplayers.push(player);})()</script>
+<h3 id="正片"><a href="#正片" class="headerlink" title="正片"></a>正片</h3><div id="dplayer21" class="dplayer hexo-tag-dplayer-mark" style="margin-bottom: 20px;"></div><script>(function(){var player = new DPlayer({"container":document.getElementById("dplayer21"),"loop":false,"screenshot":false,"video":{"url":"https://v-acfun.com/20180725/1159_66dc24a2/1000k/hls/index.m3u8"}});window.dplayers||(window.dplayers=[]);window.dplayers.push(player);})()</script>
 
 		
 		<div style="text-align: center; margin: 20px 0;">
@@ -207,6 +222,10 @@
 
 
 
+<div class="comment-container">
+	<div id="vcomments"></div>
+</div>
+
 
 <footer id="footer" class="footer bg-white">
    
@@ -235,7 +254,7 @@
                         <p id="chakhsu"></p>
                     	<p>Theme is <a href="https://github.com/cccyb/hexo-theme-pinghsu" target="_blank">Pinghsu</a> by <a href="https://m.wiredtiger.org" target="_blank">小H</a></p>
 						<p>Powered by <a href="https://hexo.io/" target="_blank" rel="nofollow">hexo</a></p>
-                        <p style="margin-top: 10px">站点总字数：16.5k</p>
+                        <p style="margin-top: 10px">站点总字数：13.5k</p>
                         
                        
                         
@@ -245,6 +264,9 @@
 				</div>
             </div>
             
+            
+            <div class="meta-item meta-comments">
+            </div>
             
 		</div>
 	</div>
@@ -438,8 +460,32 @@ MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
 <script src="/js/love.js"></script>
 
 
+<script>
+    new Valine({
+        el: '#vcomments',
+        appId: 'VM6rNlAdrDLbIOO8pfJJ7X7v-MdYXbMMI',
+        appKey: 'oz9Ay4H1SySRvkt0EBvq0sdD',
+        placeholder: 'Your commnet here. Be cool.' || 'Your commnet here. Be cool.',
+        avatar: 'mp' || 'mp',
+        pageSize: 10 || 10,
+        visitor: true,
+    })
+</script>
+
 
 <script>
+
+// 获取文章评论数
+var query1 = new AV.Query('Comment');
+query1.equalTo('url', '/2011/11/04/helloshuyansheng/');
+query1.doesNotExist('pid');
+query1.count().then(function (count) {
+    document.getElementById('page-title-comment').innerText = count + ' comment';
+}, function (error) {
+    console.log(error.message);    
+}).catch(function (error) {
+    console.log(error.message);
+});
 
 
 

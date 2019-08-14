@@ -37,6 +37,9 @@
     <![endif]-->
     
     
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+    
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
     <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
@@ -103,8 +106,14 @@
 			</div>
 			<div class="post-header-thumb-meta">
 				
+				<span id="/2018/12/14/yinduhehuoren/" class="leancloud-visitors" data-flag-title="印度合伙人">
+					<span class="leancloud-visitors-count">0</span> Views 
+				</span>
+				
 				<time datetime="1544716800" itemprop="datePublished">Published on Dec 14, 2018 in </time>
 				<a href="/categories/剧情/">剧情</a>
+				
+				with <a id="page-title-comment" href="#vcomments"></a>
 				
 				<!--
 				<div class="post-header-thumb-meta" style="font-size: 13px;">
@@ -135,7 +144,13 @@
 		</h1>
 		<div class="post-data">
 			
+			<span id="/2018/12/14/yinduhehuoren/" class="leancloud-visitors" data-flag-title="印度合伙人">
+				<span class="leancloud-visitors-count">0</span> Views 
+			</span>
+			
             <time datetime="1544716800" itemprop="datePublished">Published on Dec 14, 2018 in </time><a href="/categories/剧情/">剧情</a>
+			
+			with <a id="page-title-comment" href="#vcomments"></a>
 			
 			<div style="font-size: 13px;">
 				<span class="post-count">本文字数：261 字</span>
@@ -158,7 +173,7 @@
 <h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><blockquote>
 <p>原译名《护垫侠》，影片主人公原型是印度企业家Arunachalam Muruganantham，他发明了低成本的卫生护垫制造机，为偏远地区的贫穷家庭带去了有成本效益的女性卫生保障，给印度众多没有受过教育的女性提供了就业机会。故事讲述了印度传统风俗中，女性月事期间会被禁足，而当时卫生护垫的消费颇高不是普通家庭可以承受，为了爱妻可以获得人权自由，主人公（ 阿克谢·库玛尔 饰）顶着“变态”的舆论开始了制造卫生护垫的创业，最终成为印度当地家喻户晓的知名企业家。但是在他事业爱情双丰收时，却不忘初心回到曾经嫌弃和抛弃他的妻子身边，回到了他故乡的小村庄。</p>
 </blockquote>
-<h3 id="正片"><a href="#正片" class="headerlink" title="正片"></a>正片</h3><div id="dplayer61" class="dplayer hexo-tag-dplayer-mark" style="margin-bottom: 20px;"></div><script>(function(){var player = new DPlayer({"container":document.getElementById("dplayer61"),"loop":false,"screenshot":false,"video":{"url":"https://cn2.zuidadianying.com/ppvod/3BF4C86DA171C6A32180FE8F4A27C8B5.m3u8"}});window.dplayers||(window.dplayers=[]);window.dplayers.push(player);})()</script>
+<h3 id="正片"><a href="#正片" class="headerlink" title="正片"></a>正片</h3><div id="dplayer65" class="dplayer hexo-tag-dplayer-mark" style="margin-bottom: 20px;"></div><script>(function(){var player = new DPlayer({"container":document.getElementById("dplayer65"),"loop":false,"screenshot":false,"video":{"url":"https://cn2.zuidadianying.com/ppvod/3BF4C86DA171C6A32180FE8F4A27C8B5.m3u8"}});window.dplayers||(window.dplayers=[]);window.dplayers.push(player);})()</script>
 
 		
 		<div style="text-align: center; margin: 20px 0;">
@@ -211,6 +226,10 @@
 
 
 
+<div class="comment-container">
+	<div id="vcomments"></div>
+</div>
+
 
 <footer id="footer" class="footer bg-white">
    
@@ -239,7 +258,7 @@
                         <p id="chakhsu"></p>
                     	<p>Theme is <a href="https://github.com/cccyb/hexo-theme-pinghsu" target="_blank">Pinghsu</a> by <a href="https://m.wiredtiger.org" target="_blank">小H</a></p>
 						<p>Powered by <a href="https://hexo.io/" target="_blank" rel="nofollow">hexo</a></p>
-                        <p style="margin-top: 10px">站点总字数：16.5k</p>
+                        <p style="margin-top: 10px">站点总字数：13.5k</p>
                         
                        
                         
@@ -249,6 +268,9 @@
 				</div>
             </div>
             
+            
+            <div class="meta-item meta-comments">
+            </div>
             
 		</div>
 	</div>
@@ -442,8 +464,32 @@ MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
 <script src="/js/love.js"></script>
 
 
+<script>
+    new Valine({
+        el: '#vcomments',
+        appId: 'VM6rNlAdrDLbIOO8pfJJ7X7v-MdYXbMMI',
+        appKey: 'oz9Ay4H1SySRvkt0EBvq0sdD',
+        placeholder: 'Your commnet here. Be cool.' || 'Your commnet here. Be cool.',
+        avatar: 'mp' || 'mp',
+        pageSize: 10 || 10,
+        visitor: true,
+    })
+</script>
+
 
 <script>
+
+// 获取文章评论数
+var query1 = new AV.Query('Comment');
+query1.equalTo('url', '/2018/12/14/yinduhehuoren/');
+query1.doesNotExist('pid');
+query1.count().then(function (count) {
+    document.getElementById('page-title-comment').innerText = count + ' comment';
+}, function (error) {
+    console.log(error.message);    
+}).catch(function (error) {
+    console.log(error.message);
+});
 
 
 

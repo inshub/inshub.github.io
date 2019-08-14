@@ -37,6 +37,9 @@
     <![endif]-->
     
     
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+    
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
     <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
@@ -103,11 +106,11 @@
                 
 				
 				<div class="post-list-item">
-					<div class="post-list-item-container bg-purple">
-						<div class="item-label bg-green">
+					<div class="post-list-item-container bg-orange">
+						<div class="item-label bg-blue">
 							<div class="item-title"><a href="/2018/12/02/juedisuizhan/">绝地隧战</a></div>
 							<div class="item-meta clearfix">
-                                <div class="item-meta-ico bg-ico-image" style="background: url(/images/bg-ico.png) no-repeat;background-size: 40px auto;"></div>
+                                <div class="item-meta-ico bg-ico-code" style="background: url(/images/bg-ico.png) no-repeat;background-size: 40px auto;"></div>
 								<div class="item-meta-date"> Dec 02, 2018 </div>
 							</div>
 						</div>
@@ -119,7 +122,7 @@
 						<div class="item-label bg-purple">
 							<div class="item-title"><a href="/2016/08/10/suidao/">隧道</a></div>
 							<div class="item-meta clearfix">
-                                <div class="item-meta-ico bg-ico-web" style="background: url(/images/bg-ico.png) no-repeat;background-size: 40px auto;"></div>
+                                <div class="item-meta-ico bg-ico-code" style="background: url(/images/bg-ico.png) no-repeat;background-size: 40px auto;"></div>
 								<div class="item-meta-date"> Aug 10, 2016 </div>
 							</div>
 						</div>
@@ -127,11 +130,11 @@
 				</div>
                 
 				<div class="post-list-item">
-					<div class="post-list-item-container bg-red">
-						<div class="item-label bg-orange">
+					<div class="post-list-item-container bg-purple">
+						<div class="item-label bg-purple">
 							<div class="item-title"><a href="/2013/07/31/kongbuzhibo/">恐怖直播</a></div>
 							<div class="item-meta clearfix">
-                                <div class="item-meta-ico bg-ico-image" style="background: url(/images/bg-ico.png) no-repeat;background-size: 40px auto;"></div>
+                                <div class="item-meta-ico bg-ico-game" style="background: url(/images/bg-ico.png) no-repeat;background-size: 40px auto;"></div>
 								<div class="item-meta-date"> Jul 31, 2013 </div>
 							</div>
 						</div>
@@ -139,11 +142,11 @@
 				</div>
                 
 				<div class="post-list-item">
-					<div class="post-list-item-container bg-green">
-						<div class="item-label bg-purple">
+					<div class="post-list-item-container bg-blue">
+						<div class="item-label bg-red">
 							<div class="item-title"><a href="/2010/12/22/huanghai/">黄海</a></div>
 							<div class="item-meta clearfix">
-                                <div class="item-meta-ico bg-ico-book" style="background: url(/images/bg-ico.png) no-repeat;background-size: 40px auto;"></div>
+                                <div class="item-meta-ico bg-ico-web" style="background: url(/images/bg-ico.png) no-repeat;background-size: 40px auto;"></div>
 								<div class="item-meta-date"> Dec 22, 2010 </div>
 							</div>
 						</div>
@@ -183,7 +186,7 @@
                         <p id="chakhsu"></p>
                     	<p>Theme is <a href="https://github.com/cccyb/hexo-theme-pinghsu" target="_blank">Pinghsu</a> by <a href="https://m.wiredtiger.org" target="_blank">小H</a></p>
 						<p>Powered by <a href="https://hexo.io/" target="_blank" rel="nofollow">hexo</a></p>
-                        <p style="margin-top: 10px">站点总字数：16.5k</p>
+                        <p style="margin-top: 10px">站点总字数：13.5k</p>
                         
                        
                         
@@ -193,6 +196,9 @@
 				</div>
             </div>
             
+            
+            <div class="meta-item meta-comments">
+            </div>
             
 		</div>
 	</div>
@@ -266,6 +272,18 @@ MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
 
 <script src="/js/love.js"></script>
 
+
+<script>
+    new Valine({
+        el: '#vcomments',
+        appId: 'VM6rNlAdrDLbIOO8pfJJ7X7v-MdYXbMMI',
+        appKey: 'oz9Ay4H1SySRvkt0EBvq0sdD',
+        placeholder: 'Your commnet here. Be cool.' || 'Your commnet here. Be cool.',
+        avatar: 'mp' || 'mp',
+        pageSize: 10 || 10,
+        visitor: true,
+    })
+</script>
 
 
 <script>

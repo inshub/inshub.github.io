@@ -37,6 +37,9 @@
     <![endif]-->
     
     
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+    
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
     <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
@@ -103,8 +106,14 @@
 			</div>
 			<div class="post-header-thumb-meta">
 				
+				<span id="/2011/12/09/fangunbaaxin/" class="leancloud-visitors" data-flag-title="翻滚吧！阿信">
+					<span class="leancloud-visitors-count">0</span> Views 
+				</span>
+				
 				<time datetime="1323360000" itemprop="datePublished">Published on Dec 09, 2011 in </time>
 				<a href="/categories/励志/">励志</a>
+				
+				with <a id="page-title-comment" href="#vcomments"></a>
 				
 				<!--
 				<div class="post-header-thumb-meta" style="font-size: 13px;">
@@ -135,7 +144,13 @@
 		</h1>
 		<div class="post-data">
 			
+			<span id="/2011/12/09/fangunbaaxin/" class="leancloud-visitors" data-flag-title="翻滚吧！阿信">
+				<span class="leancloud-visitors-count">0</span> Views 
+			</span>
+			
             <time datetime="1323360000" itemprop="datePublished">Published on Dec 09, 2011 in </time><a href="/categories/励志/">励志</a>
+			
+			with <a id="page-title-comment" href="#vcomments"></a>
 			
 			<div style="font-size: 13px;">
 				<span class="post-count">本文字数：269 字</span>
@@ -158,7 +173,7 @@
 <h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><blockquote>
 <p>宜兰青年林育信（彭于晏 饰）曾经在体操队度过了快乐的少年时代，那时活泼好动的小阿信拥有出色的天分而颇得教练器重，但年岁渐长，阿信先天的长短脚令他的体操水平难以提高，又拗不过开水果铺的母亲要求，只得终止训练卖水果，并与好友菜脯（柯宇纶 饰）日日在街头和各路人马拼斗，并因此结缘为他传递打杀通知的电话秘书559（林辰唏 饰）。为了替昔日体操队友的摊档出头，阿信和菜脯开罪黑道大哥之子木瓜（陈汉典 饰），并连番让木瓜出丑，木瓜诱使菜脯吸毒，为阿信设下陷阱，结果反被菜脯重伤。阿信和菜脯只得远赴台北躲祸，少年时的体操梦，此时已变得模糊不清……</p>
 </blockquote>
-<h3 id="正片"><a href="#正片" class="headerlink" title="正片"></a>正片</h3><div id="dplayer5" class="dplayer hexo-tag-dplayer-mark" style="margin-bottom: 20px;"></div><script>(function(){var player = new DPlayer({"container":document.getElementById("dplayer5"),"loop":false,"screenshot":false,"video":{"url":"https://hair.jingpin88.com/ppvod/8AABA66D715EC2EC7A4B6176BECEE1C5.m3u8"}});window.dplayers||(window.dplayers=[]);window.dplayers.push(player);})()</script>
+<h3 id="正片"><a href="#正片" class="headerlink" title="正片"></a>正片</h3><div id="dplayer4" class="dplayer hexo-tag-dplayer-mark" style="margin-bottom: 20px;"></div><script>(function(){var player = new DPlayer({"container":document.getElementById("dplayer4"),"loop":false,"screenshot":false,"video":{"url":"https://hair.jingpin88.com/ppvod/8AABA66D715EC2EC7A4B6176BECEE1C5.m3u8"}});window.dplayers||(window.dplayers=[]);window.dplayers.push(player);})()</script>
 
 		
 		<div style="text-align: center; margin: 20px 0;">
@@ -236,6 +251,10 @@
 
 
 
+<div class="comment-container">
+	<div id="vcomments"></div>
+</div>
+
 
 <footer id="footer" class="footer bg-white">
    
@@ -264,7 +283,7 @@
                         <p id="chakhsu"></p>
                     	<p>Theme is <a href="https://github.com/cccyb/hexo-theme-pinghsu" target="_blank">Pinghsu</a> by <a href="https://m.wiredtiger.org" target="_blank">小H</a></p>
 						<p>Powered by <a href="https://hexo.io/" target="_blank" rel="nofollow">hexo</a></p>
-                        <p style="margin-top: 10px">站点总字数：16.5k</p>
+                        <p style="margin-top: 10px">站点总字数：13.5k</p>
                         
                        
                         
@@ -274,6 +293,9 @@
 				</div>
             </div>
             
+            
+            <div class="meta-item meta-comments">
+            </div>
             
 		</div>
 	</div>
@@ -467,8 +489,32 @@ MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
 <script src="/js/love.js"></script>
 
 
+<script>
+    new Valine({
+        el: '#vcomments',
+        appId: 'VM6rNlAdrDLbIOO8pfJJ7X7v-MdYXbMMI',
+        appKey: 'oz9Ay4H1SySRvkt0EBvq0sdD',
+        placeholder: 'Your commnet here. Be cool.' || 'Your commnet here. Be cool.',
+        avatar: 'mp' || 'mp',
+        pageSize: 10 || 10,
+        visitor: true,
+    })
+</script>
+
 
 <script>
+
+// 获取文章评论数
+var query1 = new AV.Query('Comment');
+query1.equalTo('url', '/2011/12/09/fangunbaaxin/');
+query1.doesNotExist('pid');
+query1.count().then(function (count) {
+    document.getElementById('page-title-comment').innerText = count + ' comment';
+}, function (error) {
+    console.log(error.message);    
+}).catch(function (error) {
+    console.log(error.message);
+});
 
 
 
