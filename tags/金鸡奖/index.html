@@ -23,7 +23,7 @@
     
     <title>
     
-        古装 - 电影小站
+        金鸡奖 - 电影小站
     
     </title>
     <meta name="keywords" content="影视分享,在线点播观看,高清电影,迅雷下载,电视剧集合,手机电影网,最新电影,电影推荐,电影迅雷下载,dyttbd,电影天堂,BT电影天堂,80电影天堂,电影天堂网,电影天堂官网,手机电影天堂,电影天堂下载">
@@ -36,6 +36,9 @@
     <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
     
+    
+    <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+    <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
     
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
@@ -64,11 +67,11 @@
             
             <a href="/jay" class>周杰伦专辑</a>
             
-            <a href="/categories" class="current">分类</a>
+            <a href="/categories" class>分类</a>
             
-            <a href="/tags" class>标签</a>
+            <a href="/tags" class="current">标签</a>
             
-            <a href="/about" class>关于我</a>
+            <a href="/about" class>留言板</a>
             
         </div>
         <a href="/tags" class="navbar-search">
@@ -81,11 +84,11 @@
                 
                 <li><a href="/jay" class>周杰伦专辑</a></li>
                 
-                <li><a href="/categories" class="current">分类</a></li>
+                <li><a href="/categories" class>分类</a></li>
                 
-                <li><a href="/tags" class>标签</a></li>
+                <li><a href="/tags" class="current">标签</a></li>
                 
-                <li><a href="/about" class>关于我</a></li>
+                <li><a href="/about" class>留言板</a></li>
                 
             </ul>
         </div>
@@ -96,19 +99,19 @@
     <div class="common-item">
         <div class="common-title">
             
-            Category : 古装
+            Tag : 金鸡奖
         </div>
         <div class="post-lists">
 			<div class="post-lists-body">
                 
 				
 				<div class="post-list-item">
-					<div class="post-list-item-container bg-red">
+					<div class="post-list-item-container bg-blue">
 						<div class="item-label bg-yellow">
-							<div class="item-title"><a href="/2019/07/23/changanshiershi/">长安十二时辰</a></div>
+							<div class="item-title"><a href="/2019/08/17/dashengguilai/">西游记之大圣归来</a></div>
 							<div class="item-meta clearfix">
-                                <div class="item-meta-ico bg-ico-design" style="background: url(/images/bg-ico.png) no-repeat;background-size: 40px auto;"></div>
-								<div class="item-meta-date"> Jul 23, 2019 </div>
+                                <div class="item-meta-ico bg-ico-chat" style="background: url(/images/bg-ico.png) no-repeat;background-size: 40px auto;"></div>
+								<div class="item-meta-date"> Aug 17, 2019 </div>
 							</div>
 						</div>
 					</div>
@@ -120,7 +123,6 @@
     </div>
     
 </div>
-
 <footer id="footer" class="footer bg-white">
    
 	<div class="footer-social">
@@ -148,7 +150,7 @@
                         <p id="chakhsu"></p>
                     	<p>Theme is <a href="https://github.com/cccyb/hexo-theme-pinghsu" target="_blank">Pinghsu</a> by <a href="https://m.wiredtiger.org" target="_blank">小H</a></p>
 						<p>Powered by <a href="https://hexo.io/" target="_blank" rel="nofollow">hexo</a></p>
-                        <p style="margin-top: 10px">站点总字数：16.5k</p>
+                        <p style="margin-top: 10px">站点总字数：15.1k</p>
                         
                        
                         
@@ -158,6 +160,9 @@
 				</div>
             </div>
             
+            
+            <div class="meta-item meta-comments">
+            </div>
             
 		</div>
 	</div>
@@ -231,6 +236,18 @@ MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
 
 <script src="/js/love.js"></script>
 
+
+<script>
+    new Valine({
+        el: '#vcomments',
+        appId: 'VM6rNlAdrDLbIOO8pfJJ7X7v-MdYXbMMI',
+        appKey: 'oz9Ay4H1SySRvkt0EBvq0sdD',
+        placeholder: '小阔爱，留下你的看法' || 'Your commnet here. Be cool.',
+        avatar: 'mp' || 'mp',
+        pageSize: 10 || 10,
+        visitor: true,
+    })
+</script>
 
 
 <script>
