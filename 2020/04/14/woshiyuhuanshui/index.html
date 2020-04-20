@@ -56,6 +56,49 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/hls.js/0.12.4/hls.min.js"></script><script src="https://cdn.jsdelivr.net/npm/dplayer/dist/DPlayer.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/dplayer/dist/DPlayer.min.css"><script src="https://cdnjs.cloudflare.com/ajax/libs/hls.js/0.12.4/hls.min.js"></script><script src="https://cdn.jsdelivr.net/npm/dplayer/dist/DPlayer.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/dplayer/dist/DPlayer.min.css"></head>
 <body class="bg-white" gtools_scp_screen_capture_injected="true">
+<!-- weixinTip -->
+<style type="text/css">
+    *{margin:0; padding:0;}
+    img{max-width: 100%; height: auto;}
+    .test{height: 600px; max-width: 600px; font-size: 40px;}
+</style>
+<script type="text/javascript">
+    function is_weixin() {
+        var ua = navigator.userAgent.toLowerCase();
+        if (ua.match(/MicroMessenger/i) == "micromessenger") {
+            return true;
+        } else {
+            return false;
+        }
+    }
+    var isWeixin = is_weixin();
+    var winHeight = typeof window.innerHeight != 'undefined' ? window.innerHeight : document.documentElement.clientHeight;
+    function loadHtml(){
+        var div = document.createElement('div');
+        div.id = 'weixin-tip';
+        div.innerHTML = '<p><img src="/images/live_weixin.png" alt="微信打开"/></p>';
+        document.body.appendChild(div);
+    }
+    
+    function loadStyleText(cssText) {
+        var style = document.createElement('style');
+        style.rel = 'stylesheet';
+        style.type = 'text/css';
+        try {
+            style.appendChild(document.createTextNode(cssText));
+        } catch (e) {
+            style.styleSheet.cssText = cssText; //ie9以下
+        }
+        var head=document.getElementsByTagName("head")[0]; //head标签之间加上style样式
+        head.appendChild(style); 
+    }
+    var cssText = "#weixin-tip{position: fixed; left:0; top:0; background: rgba(0,0,0,0.8); filter:alpha(opacity=80); width: 100%; height:100%; z-index: 100;} #weixin-tip p{text-align: center; margin-top: 10%; padding:0 5%;}";
+    if(isWeixin){
+        loadHtml();
+        loadStyleText(cssText);
+    }
+</script>
+
 <!--[if lt IE 8]>
 <div class="browsehappy" role="dialog">
     当前网页 <strong>不支持</strong> 你正在使用的浏览器. 为了正常的访问, 请 <a href="http://browsehappy.com/" target="_blank">升级你的浏览器</a>。
@@ -178,10 +221,10 @@
 <h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><blockquote>
 <p>我是余欢水，超前付费点播，免费看</p>
 </blockquote>
-<h3 id="正片"><a href="#正片" class="headerlink" title="正片"></a>正片</h3><h3 id="超前点播-第9集"><a href="#超前点播-第9集" class="headerlink" title="超前点播 第9集"></a>超前点播 第9集</h3><div id="dplayer91" class="dplayer hexo-tag-dplayer-mark" style="margin-bottom: 20px;"></div><script>(function(){var player = new DPlayer({"container":document.getElementById("dplayer91"),"loop":false,"screenshot":false,"video":{"url":"https://youku.cdn10-okzy.com/20200413/13700_b839c738/1000k/hls/index.m3u8"},"danmaku":{"api":"https://dplayer.moerats.com/"}});window.dplayers||(window.dplayers=[]);window.dplayers.push(player);})()</script>
-<h3 id="超前点播-第10集"><a href="#超前点播-第10集" class="headerlink" title="超前点播 第10集"></a>超前点播 第10集</h3><div id="dplayer92" class="dplayer hexo-tag-dplayer-mark" style="margin-bottom: 20px;"></div><script>(function(){var player = new DPlayer({"container":document.getElementById("dplayer92"),"loop":false,"screenshot":false,"video":{"url":"https://youku.cdn10-okzy.com/20200413/13699_302fd52f/1000k/hls/index.m3u8"},"danmaku":{"api":"https://dplayer.moerats.com/"}});window.dplayers||(window.dplayers=[]);window.dplayers.push(player);})()</script>
-<h3 id="超前点播-第11集"><a href="#超前点播-第11集" class="headerlink" title="超前点播 第11集"></a>超前点播 第11集</h3><div id="dplayer93" class="dplayer hexo-tag-dplayer-mark" style="margin-bottom: 20px;"></div><script>(function(){var player = new DPlayer({"container":document.getElementById("dplayer93"),"loop":false,"screenshot":false,"video":{"url":"https://youku.cdn10-okzy.com/20200413/13698_d00cc8de/1000k/hls/index.m3u8"},"danmaku":{"api":"https://dplayer.moerats.com/"}});window.dplayers||(window.dplayers=[]);window.dplayers.push(player);})()</script>
-<h3 id="超前点播-第12集"><a href="#超前点播-第12集" class="headerlink" title="超前点播 第12集"></a>超前点播 第12集</h3><div id="dplayer94" class="dplayer hexo-tag-dplayer-mark" style="margin-bottom: 20px;"></div><script>(function(){var player = new DPlayer({"container":document.getElementById("dplayer94"),"loop":false,"screenshot":false,"video":{"url":"https://youku.cdn10-okzy.com/20200413/13697_ac8193f0/1000k/hls/index.m3u8"},"danmaku":{"api":"https://dplayer.moerats.com/"}});window.dplayers||(window.dplayers=[]);window.dplayers.push(player);})()</script>
+<h3 id="正片"><a href="#正片" class="headerlink" title="正片"></a>正片</h3><h3 id="超前点播-第9集"><a href="#超前点播-第9集" class="headerlink" title="超前点播 第9集"></a>超前点播 第9集</h3><div id="dplayer80" class="dplayer hexo-tag-dplayer-mark" style="margin-bottom: 20px;"></div><script>(function(){var player = new DPlayer({"container":document.getElementById("dplayer80"),"loop":false,"screenshot":false,"video":{"url":"https://youku.cdn10-okzy.com/20200413/13700_b839c738/1000k/hls/index.m3u8"},"danmaku":{"api":"https://dplayer.moerats.com/"}});window.dplayers||(window.dplayers=[]);window.dplayers.push(player);})()</script>
+<h3 id="超前点播-第10集"><a href="#超前点播-第10集" class="headerlink" title="超前点播 第10集"></a>超前点播 第10集</h3><div id="dplayer81" class="dplayer hexo-tag-dplayer-mark" style="margin-bottom: 20px;"></div><script>(function(){var player = new DPlayer({"container":document.getElementById("dplayer81"),"loop":false,"screenshot":false,"video":{"url":"https://youku.cdn10-okzy.com/20200413/13699_302fd52f/1000k/hls/index.m3u8"},"danmaku":{"api":"https://dplayer.moerats.com/"}});window.dplayers||(window.dplayers=[]);window.dplayers.push(player);})()</script>
+<h3 id="超前点播-第11集"><a href="#超前点播-第11集" class="headerlink" title="超前点播 第11集"></a>超前点播 第11集</h3><div id="dplayer82" class="dplayer hexo-tag-dplayer-mark" style="margin-bottom: 20px;"></div><script>(function(){var player = new DPlayer({"container":document.getElementById("dplayer82"),"loop":false,"screenshot":false,"video":{"url":"https://youku.cdn10-okzy.com/20200413/13698_d00cc8de/1000k/hls/index.m3u8"},"danmaku":{"api":"https://dplayer.moerats.com/"}});window.dplayers||(window.dplayers=[]);window.dplayers.push(player);})()</script>
+<h3 id="超前点播-第12集"><a href="#超前点播-第12集" class="headerlink" title="超前点播 第12集"></a>超前点播 第12集</h3><div id="dplayer83" class="dplayer hexo-tag-dplayer-mark" style="margin-bottom: 20px;"></div><script>(function(){var player = new DPlayer({"container":document.getElementById("dplayer83"),"loop":false,"screenshot":false,"video":{"url":"https://youku.cdn10-okzy.com/20200413/13697_ac8193f0/1000k/hls/index.m3u8"},"danmaku":{"api":"https://dplayer.moerats.com/"}});window.dplayers||(window.dplayers=[]);window.dplayers.push(player);})()</script>
 
 		
 		<div style="text-align: center; margin: 20px 0;">
@@ -264,7 +307,7 @@
                         <p id="chakhsu"></p>
                     	<p>Theme is <a href="https://github.com/cccyb/hexo-theme-pinghsu" target="_blank">Pinghsu</a> by <a href="https://m.wiredtiger.org" target="_blank">小H</a></p>
 						<p>Powered by <a href="https://hexo.io/" target="_blank" rel="nofollow">hexo</a></p>
-                        <p style="margin-top: 10px">站点总字数：23.2k</p>
+                        <p style="margin-top: 10px">站点总字数：23.1k</p>
                         
                        
                         

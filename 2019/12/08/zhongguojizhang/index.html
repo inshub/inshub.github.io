@@ -56,6 +56,49 @@
 
 </head>
 <body class="bg-white" gtools_scp_screen_capture_injected="true">
+<!-- weixinTip -->
+<style type="text/css">
+    *{margin:0; padding:0;}
+    img{max-width: 100%; height: auto;}
+    .test{height: 600px; max-width: 600px; font-size: 40px;}
+</style>
+<script type="text/javascript">
+    function is_weixin() {
+        var ua = navigator.userAgent.toLowerCase();
+        if (ua.match(/MicroMessenger/i) == "micromessenger") {
+            return true;
+        } else {
+            return false;
+        }
+    }
+    var isWeixin = is_weixin();
+    var winHeight = typeof window.innerHeight != 'undefined' ? window.innerHeight : document.documentElement.clientHeight;
+    function loadHtml(){
+        var div = document.createElement('div');
+        div.id = 'weixin-tip';
+        div.innerHTML = '<p><img src="/images/live_weixin.png" alt="微信打开"/></p>';
+        document.body.appendChild(div);
+    }
+    
+    function loadStyleText(cssText) {
+        var style = document.createElement('style');
+        style.rel = 'stylesheet';
+        style.type = 'text/css';
+        try {
+            style.appendChild(document.createTextNode(cssText));
+        } catch (e) {
+            style.styleSheet.cssText = cssText; //ie9以下
+        }
+        var head=document.getElementsByTagName("head")[0]; //head标签之间加上style样式
+        head.appendChild(style); 
+    }
+    var cssText = "#weixin-tip{position: fixed; left:0; top:0; background: rgba(0,0,0,0.8); filter:alpha(opacity=80); width: 100%; height:100%; z-index: 100;} #weixin-tip p{text-align: center; margin-top: 10%; padding:0 5%;}";
+    if(isWeixin){
+        loadHtml();
+        loadStyleText(cssText);
+    }
+</script>
+
 <!--[if lt IE 8]>
 <div class="browsehappy" role="dialog">
     当前网页 <strong>不支持</strong> 你正在使用的浏览器. 为了正常的访问, 请 <a href="http://browsehappy.com/" target="_blank">升级你的浏览器</a>。
@@ -107,7 +150,7 @@
 
 
 <div class="post-header-thumb">
-	<div class="post-header-thumb-op" style="background-image:url(/images/thumbs/8.jpg);"></div>
+	<div class="post-header-thumb-op" style="background-image:url(/images/thumbs/5.jpg);"></div>
 	<div class="post-header-thumb-cover">
 		<div class="post-header-thumb-container">
 			<div class="post-header-thumb-title">
@@ -126,7 +169,7 @@
 				
 				<!--
 				<div class="post-header-thumb-meta" style="font-size: 13px;">
-					<span class="post-count">本文字数：135 字</span>
+					<span class="post-count">本文字数：113 字</span>
 					<span>|</span>
 					<span class="post-count">阅读时长 ≈ 1 min</span>
 				</div>
@@ -162,7 +205,7 @@
 			with <a id="page-title-comment" href="#vcomments"></a>
 			
 			<div style="font-size: 13px;">
-				<span class="post-count">本文字数：135 字</span>
+				<span class="post-count">本文字数：113 字</span>
 				<span>|</span>
 				<span class="post-count">阅读时长 ≈ 1 min</span>
 			</div>
@@ -189,7 +232,7 @@
 <div id="decryptionError" style="display: none;">Incorrect Password!</div>
 <div id="noContentError" style="display: none;">No content to display!</div>
 <div id="encrypt-blog" style="display:none">
-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
+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
 </div>
 <script src="/lib/crypto-js.js"></script><script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">
 		
@@ -229,10 +272,10 @@ U2FsdGVkX19Y8UrIOMJ8bnwvF0GDIt4kWBLyQUl2OhU/DZUNUWrCWc7fe7iSZkR/T+ti65k/Yt293hO9
 		<div class="social-share left" data-sites="qzone,qq,weibo,wechat,douban" data-wechat-qrcode-helper='微信扫一扫'></div>
 		<div class="bottom-bar-items right">
             
-            <span class="bottom-bar-item"><a href="/2019/12/08/pandengzhe/">←</a></span>
+            <span class="bottom-bar-item"><a href="/2019/12/08/jueshengshike/">←</a></span>
             
             
-            <span class="bottom-bar-item"><a href="/2019/12/08/jueshengshike/">→</a></span>
+            <span class="bottom-bar-item"><a href="/2019/12/08/xingjitansuo/">→</a></span>
             
 			<span class="bottom-bar-item"><a href="#footer">↓</a></span>
 			<span class="bottom-bar-item"><a href="#">↑</a></span>
@@ -275,7 +318,7 @@ U2FsdGVkX19Y8UrIOMJ8bnwvF0GDIt4kWBLyQUl2OhU/DZUNUWrCWc7fe7iSZkR/T+ti65k/Yt293hO9
                         <p id="chakhsu"></p>
                     	<p>Theme is <a href="https://github.com/cccyb/hexo-theme-pinghsu" target="_blank">Pinghsu</a> by <a href="https://m.wiredtiger.org" target="_blank">小H</a></p>
 						<p>Powered by <a href="https://hexo.io/" target="_blank" rel="nofollow">hexo</a></p>
-                        <p style="margin-top: 10px">站点总字数：23.2k</p>
+                        <p style="margin-top: 10px">站点总字数：23.1k</p>
                         
                        
                         

@@ -56,6 +56,49 @@
 
 </head>
 <body class="bg-white" gtools_scp_screen_capture_injected="true">
+<!-- weixinTip -->
+<style type="text/css">
+    *{margin:0; padding:0;}
+    img{max-width: 100%; height: auto;}
+    .test{height: 600px; max-width: 600px; font-size: 40px;}
+</style>
+<script type="text/javascript">
+    function is_weixin() {
+        var ua = navigator.userAgent.toLowerCase();
+        if (ua.match(/MicroMessenger/i) == "micromessenger") {
+            return true;
+        } else {
+            return false;
+        }
+    }
+    var isWeixin = is_weixin();
+    var winHeight = typeof window.innerHeight != 'undefined' ? window.innerHeight : document.documentElement.clientHeight;
+    function loadHtml(){
+        var div = document.createElement('div');
+        div.id = 'weixin-tip';
+        div.innerHTML = '<p><img src="/images/live_weixin.png" alt="微信打开"/></p>';
+        document.body.appendChild(div);
+    }
+    
+    function loadStyleText(cssText) {
+        var style = document.createElement('style');
+        style.rel = 'stylesheet';
+        style.type = 'text/css';
+        try {
+            style.appendChild(document.createTextNode(cssText));
+        } catch (e) {
+            style.styleSheet.cssText = cssText; //ie9以下
+        }
+        var head=document.getElementsByTagName("head")[0]; //head标签之间加上style样式
+        head.appendChild(style); 
+    }
+    var cssText = "#weixin-tip{position: fixed; left:0; top:0; background: rgba(0,0,0,0.8); filter:alpha(opacity=80); width: 100%; height:100%; z-index: 100;} #weixin-tip p{text-align: center; margin-top: 10%; padding:0 5%;}";
+    if(isWeixin){
+        loadHtml();
+        loadStyleText(cssText);
+    }
+</script>
+
 <!--[if lt IE 8]>
 <div class="browsehappy" role="dialog">
     当前网页 <strong>不支持</strong> 你正在使用的浏览器. 为了正常的访问, 请 <a href="http://browsehappy.com/" target="_blank">升级你的浏览器</a>。
@@ -115,11 +158,11 @@
                 
 				
 				<div class="post-list-item">
-					<div class="post-list-item-container bg-orange">
+					<div class="post-list-item-container bg-green">
 						<div class="item-label bg-yellow">
 							<div class="item-title"><a href="/2018/12/02/juedisuizhan/">绝地隧战</a></div>
 							<div class="item-meta clearfix">
-                                <div class="item-meta-ico bg-ico-book" style="background: url(/images/bg-ico.png) no-repeat;background-size: 40px auto;"></div>
+                                <div class="item-meta-ico bg-ico-web" style="background: url(/images/bg-ico.png) no-repeat;background-size: 40px auto;"></div>
 								<div class="item-meta-date"> Dec 02, 2018 </div>
 							</div>
 						</div>
@@ -127,11 +170,11 @@
 				</div>
                 
 				<div class="post-list-item">
-					<div class="post-list-item-container bg-purple">
-						<div class="item-label bg-blue">
+					<div class="post-list-item-container bg-green">
+						<div class="item-label bg-yellow">
 							<div class="item-title"><a href="/2018/09/07/mengmaijiudian/">孟买酒店</a></div>
 							<div class="item-meta clearfix">
-                                <div class="item-meta-ico bg-ico-web" style="background: url(/images/bg-ico.png) no-repeat;background-size: 40px auto;"></div>
+                                <div class="item-meta-ico bg-ico-code" style="background: url(/images/bg-ico.png) no-repeat;background-size: 40px auto;"></div>
 								<div class="item-meta-date"> Sep 07, 2018 </div>
 							</div>
 						</div>
@@ -139,11 +182,11 @@
 				</div>
                 
 				<div class="post-list-item">
-					<div class="post-list-item-container bg-green">
-						<div class="item-label bg-red">
+					<div class="post-list-item-container bg-red">
+						<div class="item-label bg-yellow">
 							<div class="item-title"><a href="/2018/08/03/xiaotoujiazu/">小偷家族</a></div>
 							<div class="item-meta clearfix">
-                                <div class="item-meta-ico bg-ico-web" style="background: url(/images/bg-ico.png) no-repeat;background-size: 40px auto;"></div>
+                                <div class="item-meta-ico bg-ico-code" style="background: url(/images/bg-ico.png) no-repeat;background-size: 40px auto;"></div>
 								<div class="item-meta-date"> Aug 03, 2018 </div>
 							</div>
 						</div>
@@ -155,7 +198,7 @@
 						<div class="item-label bg-red">
 							<div class="item-title"><a href="/2017/01/18/wangzhe/">王者</a></div>
 							<div class="item-meta clearfix">
-                                <div class="item-meta-ico bg-ico-design" style="background: url(/images/bg-ico.png) no-repeat;background-size: 40px auto;"></div>
+                                <div class="item-meta-ico bg-ico-note" style="background: url(/images/bg-ico.png) no-repeat;background-size: 40px auto;"></div>
 								<div class="item-meta-date"> Jan 18, 2017 </div>
 							</div>
 						</div>
@@ -163,11 +206,11 @@
 				</div>
                 
 				<div class="post-list-item">
-					<div class="post-list-item-container bg-green">
-						<div class="item-label bg-green">
+					<div class="post-list-item-container bg-yellow">
+						<div class="item-label bg-blue">
 							<div class="item-title"><a href="/2012/11/16/wanjianchuanxin/">万箭穿心</a></div>
 							<div class="item-meta clearfix">
-                                <div class="item-meta-ico bg-ico-game" style="background: url(/images/bg-ico.png) no-repeat;background-size: 40px auto;"></div>
+                                <div class="item-meta-ico bg-ico-note" style="background: url(/images/bg-ico.png) no-repeat;background-size: 40px auto;"></div>
 								<div class="item-meta-date"> Nov 16, 2012 </div>
 							</div>
 						</div>
@@ -175,11 +218,11 @@
 				</div>
                 
 				<div class="post-list-item">
-					<div class="post-list-item-container bg-green">
-						<div class="item-label bg-orange">
+					<div class="post-list-item-container bg-blue">
+						<div class="item-label bg-purple">
 							<div class="item-title"><a href="/2011/12/08/sanshadanaobaolaiwu/">三傻大闹宝莱坞</a></div>
 							<div class="item-meta clearfix">
-                                <div class="item-meta-ico bg-ico-lock" style="background: url(/images/bg-ico.png) no-repeat;background-size: 40px auto;"></div>
+                                <div class="item-meta-ico bg-ico-game" style="background: url(/images/bg-ico.png) no-repeat;background-size: 40px auto;"></div>
 								<div class="item-meta-date"> Dec 08, 2011 </div>
 							</div>
 						</div>
@@ -187,11 +230,11 @@
 				</div>
                 
 				<div class="post-list-item">
-					<div class="post-list-item-container bg-yellow">
-						<div class="item-label bg-green">
+					<div class="post-list-item-container bg-purple">
+						<div class="item-label bg-purple">
 							<div class="item-title"><a href="/2011/11/02/chubukeji/">触不可及</a></div>
 							<div class="item-meta clearfix">
-                                <div class="item-meta-ico bg-ico-book" style="background: url(/images/bg-ico.png) no-repeat;background-size: 40px auto;"></div>
+                                <div class="item-meta-ico bg-ico-image" style="background: url(/images/bg-ico.png) no-repeat;background-size: 40px auto;"></div>
 								<div class="item-meta-date"> Nov 02, 2011 </div>
 							</div>
 						</div>
@@ -199,11 +242,11 @@
 				</div>
                 
 				<div class="post-list-item">
-					<div class="post-list-item-container bg-blue">
-						<div class="item-label bg-blue">
+					<div class="post-list-item-container bg-red">
+						<div class="item-label bg-green">
 							<div class="item-title"><a href="/2011/09/22/ronglu/">熔炉</a></div>
 							<div class="item-meta clearfix">
-                                <div class="item-meta-ico bg-ico-link" style="background: url(/images/bg-ico.png) no-repeat;background-size: 40px auto;"></div>
+                                <div class="item-meta-ico bg-ico-web" style="background: url(/images/bg-ico.png) no-repeat;background-size: 40px auto;"></div>
 								<div class="item-meta-date"> Sep 22, 2011 </div>
 							</div>
 						</div>
@@ -211,11 +254,11 @@
 				</div>
                 
 				<div class="post-list-item">
-					<div class="post-list-item-container bg-purple">
-						<div class="item-label bg-yellow">
+					<div class="post-list-item-container bg-orange">
+						<div class="item-label bg-purple">
 							<div class="item-title"><a href="/2010/10/01/shejiaowangluo/">社交网络</a></div>
 							<div class="item-meta clearfix">
-                                <div class="item-meta-ico bg-ico-game" style="background: url(/images/bg-ico.png) no-repeat;background-size: 40px auto;"></div>
+                                <div class="item-meta-ico bg-ico-design" style="background: url(/images/bg-ico.png) no-repeat;background-size: 40px auto;"></div>
 								<div class="item-meta-date"> Oct 01, 2010 </div>
 							</div>
 						</div>
@@ -223,11 +266,11 @@
 				</div>
                 
 				<div class="post-list-item">
-					<div class="post-list-item-container bg-green">
-						<div class="item-label bg-yellow">
+					<div class="post-list-item-container bg-yellow">
+						<div class="item-label bg-purple">
 							<div class="item-title"><a href="/2008/01/17/dangxingfulaiqiaomen/">当幸福来敲门</a></div>
 							<div class="item-meta clearfix">
-                                <div class="item-meta-ico bg-ico-game" style="background: url(/images/bg-ico.png) no-repeat;background-size: 40px auto;"></div>
+                                <div class="item-meta-ico bg-ico-note" style="background: url(/images/bg-ico.png) no-repeat;background-size: 40px auto;"></div>
 								<div class="item-meta-date"> Jan 17, 2008 </div>
 							</div>
 						</div>
@@ -274,7 +317,7 @@
                         <p id="chakhsu"></p>
                     	<p>Theme is <a href="https://github.com/cccyb/hexo-theme-pinghsu" target="_blank">Pinghsu</a> by <a href="https://m.wiredtiger.org" target="_blank">小H</a></p>
 						<p>Powered by <a href="https://hexo.io/" target="_blank" rel="nofollow">hexo</a></p>
-                        <p style="margin-top: 10px">站点总字数：23.2k</p>
+                        <p style="margin-top: 10px">站点总字数：23.1k</p>
                         
                        
                         

@@ -56,6 +56,49 @@
 
 </head>
 <body class="bg-grey" gtools_scp_screen_capture_injected="true">
+<!-- weixinTip -->
+<style type="text/css">
+    *{margin:0; padding:0;}
+    img{max-width: 100%; height: auto;}
+    .test{height: 600px; max-width: 600px; font-size: 40px;}
+</style>
+<script type="text/javascript">
+    function is_weixin() {
+        var ua = navigator.userAgent.toLowerCase();
+        if (ua.match(/MicroMessenger/i) == "micromessenger") {
+            return true;
+        } else {
+            return false;
+        }
+    }
+    var isWeixin = is_weixin();
+    var winHeight = typeof window.innerHeight != 'undefined' ? window.innerHeight : document.documentElement.clientHeight;
+    function loadHtml(){
+        var div = document.createElement('div');
+        div.id = 'weixin-tip';
+        div.innerHTML = '<p><img src="/images/live_weixin.png" alt="微信打开"/></p>';
+        document.body.appendChild(div);
+    }
+    
+    function loadStyleText(cssText) {
+        var style = document.createElement('style');
+        style.rel = 'stylesheet';
+        style.type = 'text/css';
+        try {
+            style.appendChild(document.createTextNode(cssText));
+        } catch (e) {
+            style.styleSheet.cssText = cssText; //ie9以下
+        }
+        var head=document.getElementsByTagName("head")[0]; //head标签之间加上style样式
+        head.appendChild(style); 
+    }
+    var cssText = "#weixin-tip{position: fixed; left:0; top:0; background: rgba(0,0,0,0.8); filter:alpha(opacity=80); width: 100%; height:100%; z-index: 100;} #weixin-tip p{text-align: center; margin-top: 10%; padding:0 5%;}";
+    if(isWeixin){
+        loadHtml();
+        loadStyleText(cssText);
+    }
+</script>
+
 <!--[if lt IE 8]>
 <div class="browsehappy" role="dialog">
     当前网页 <strong>不支持</strong> 你正在使用的浏览器. 为了正常的访问, 请 <a href="http://browsehappy.com/" target="_blank">升级你的浏览器</a>。
@@ -121,7 +164,7 @@
                             
 						</div>
 					</a>
-					<div class="item-slant reverse-slant bg-red"></div>
+					<div class="item-slant reverse-slant bg-purple"></div>
 					<div class="item-slant"></div>
 					<div class="item-label">
 						<div class="item-title"><a href="/2019/04/29/heyiweijia/">何以为家</a></div>
@@ -133,7 +176,7 @@
 								</span>
 							</div>
 							
-                            <div class="item-meta-ico bg-ico-link" style="background: url(/images/bg-ico.png) no-repeat;background-size: 40px auto;"></div>
+                            <div class="item-meta-ico bg-ico-web" style="background: url(/images/bg-ico.png) no-repeat;background-size: 40px auto;"></div>
                             <div class="item-meta-cat">
                                 
                                 <a href="/categories/剧情/">剧情</a>
@@ -149,7 +192,7 @@
 			
             <div class="post-list-item">
 				<div class="post-list-item-container">
-					<div class="item-thumb bg-purple" style="background-image:url(https://p0.meituan.net/moviemachine/f7d2ad70eb79d6d9b8a197713db9b8c41711752.jpg);"></div>
+					<div class="item-thumb bg-blue" style="background-image:url(https://p0.meituan.net/moviemachine/f7d2ad70eb79d6d9b8a197713db9b8c41711752.jpg);"></div>
 					<a href="/2019/04/24/fuchouzhelianmeng4/">
                         <div class="item-desc">
                             
@@ -159,7 +202,7 @@
                             
 						</div>
 					</a>
-					<div class="item-slant reverse-slant bg-purple"></div>
+					<div class="item-slant reverse-slant bg-yellow"></div>
 					<div class="item-slant"></div>
 					<div class="item-label">
 						<div class="item-title"><a href="/2019/04/24/fuchouzhelianmeng4/">复仇者联盟4：终局之战</a></div>
@@ -171,48 +214,10 @@
 								</span>
 							</div>
 							
-                            <div class="item-meta-ico bg-ico-web" style="background: url(/images/bg-ico.png) no-repeat;background-size: 40px auto;"></div>
+                            <div class="item-meta-ico bg-ico-book" style="background: url(/images/bg-ico.png) no-repeat;background-size: 40px auto;"></div>
                             <div class="item-meta-cat">
                                 
                                 <a href="/categories/类型/">类型</a>
-								
-                            </div>
-						</div>
-					</div>
-				</div>
-			</div>
-			
-			
-        
-			
-            <div class="post-list-item">
-				<div class="post-list-item-container">
-					<div class="item-thumb bg-orange" style="background-image:url(https://p0.meituan.net/movie/cb932bea95b45c2b860cfdb4dad15077279455.jpg);"></div>
-					<a href="/2019/03/20/xinshijie/">
-                        <div class="item-desc">
-                            
-                            <p>
-简介
-“金门”是韩国境内最强大的黑帮组织，并以企业集团军的模式不断发展壮大。警局搜查科姜科长安排新人警察李子成（李政宰 饰）潜入“金门”卧底。...</p>
-                            
-						</div>
-					</a>
-					<div class="item-slant reverse-slant bg-green"></div>
-					<div class="item-slant"></div>
-					<div class="item-label">
-						<div class="item-title"><a href="/2019/03/20/xinshijie/">新世界</a></div>
-						<div class="item-meta clearfix">
-							
-							<div class="item-meta-date" style="color: #313131; padding-top: 10px; font-size: 13px;">
-								<span id="/2019/03/20/xinshijie/" class="leancloud-visitors" data-flag-title="新世界">
-									<span class="leancloud-visitors-count">0</span> Views 
-								</span>
-							</div>
-							
-                            <div class="item-meta-ico bg-ico-web" style="background: url(/images/bg-ico.png) no-repeat;background-size: 40px auto;"></div>
-                            <div class="item-meta-cat">
-                                
-                                <a href="/categories/犯罪/">犯罪</a>
 								
                             </div>
 						</div>
@@ -247,7 +252,45 @@
 								</span>
 							</div>
 							
-                            <div class="item-meta-ico bg-ico-game" style="background: url(/images/bg-ico.png) no-repeat;background-size: 40px auto;"></div>
+                            <div class="item-meta-ico bg-ico-image" style="background: url(/images/bg-ico.png) no-repeat;background-size: 40px auto;"></div>
+                            <div class="item-meta-cat">
+                                
+                                <a href="/categories/犯罪/">犯罪</a>
+								
+                            </div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			
+        
+			
+            <div class="post-list-item">
+				<div class="post-list-item-container">
+					<div class="item-thumb bg-purple" style="background-image:url(https://p0.meituan.net/movie/cb932bea95b45c2b860cfdb4dad15077279455.jpg);"></div>
+					<a href="/2019/03/20/xinshijie/">
+                        <div class="item-desc">
+                            
+                            <p>
+简介
+“金门”是韩国境内最强大的黑帮组织，并以企业集团军的模式不断发展壮大。警局搜查科姜科长安排新人警察李子成（李政宰 饰）潜入“金门”卧底。...</p>
+                            
+						</div>
+					</a>
+					<div class="item-slant reverse-slant bg-yellow"></div>
+					<div class="item-slant"></div>
+					<div class="item-label">
+						<div class="item-title"><a href="/2019/03/20/xinshijie/">新世界</a></div>
+						<div class="item-meta clearfix">
+							
+							<div class="item-meta-date" style="color: #313131; padding-top: 10px; font-size: 13px;">
+								<span id="/2019/03/20/xinshijie/" class="leancloud-visitors" data-flag-title="新世界">
+									<span class="leancloud-visitors-count">0</span> Views 
+								</span>
+							</div>
+							
+                            <div class="item-meta-ico bg-ico-web" style="background: url(/images/bg-ico.png) no-repeat;background-size: 40px auto;"></div>
                             <div class="item-meta-cat">
                                 
                                 <a href="/categories/犯罪/">犯罪</a>
@@ -273,7 +316,7 @@
                             
 						</div>
 					</a>
-					<div class="item-slant reverse-slant bg-green"></div>
+					<div class="item-slant reverse-slant bg-orange"></div>
 					<div class="item-slant"></div>
 					<div class="item-label">
 						<div class="item-title"><a href="/2019/02/05/liulangdiqiu/">流浪地球</a></div>
@@ -301,7 +344,7 @@
 			
             <div class="post-list-item">
 				<div class="post-list-item-container">
-					<div class="item-thumb bg-yellow" style="background-image:url(https://p0.meituan.net/movie/a48ac62bd6f10b9bf94aebc2f19d24021727296.jpg);"></div>
+					<div class="item-thumb bg-blue" style="background-image:url(https://p0.meituan.net/movie/a48ac62bd6f10b9bf94aebc2f19d24021727296.jpg);"></div>
 					<a href="/2019/01/11/whitesnake/">
                         <div class="item-desc">
                             
@@ -323,7 +366,7 @@
 								</span>
 							</div>
 							
-                            <div class="item-meta-ico bg-ico-web" style="background: url(/images/bg-ico.png) no-repeat;background-size: 40px auto;"></div>
+                            <div class="item-meta-ico bg-ico-game" style="background: url(/images/bg-ico.png) no-repeat;background-size: 40px auto;"></div>
                             <div class="item-meta-cat">
                                 
                                 <a href="/categories/爱情/">爱情</a>
@@ -339,7 +382,7 @@
 			
             <div class="post-list-item">
 				<div class="post-list-item-container">
-					<div class="item-thumb bg-green" style="background-image:url(https://p0.meituan.net/movie/da4eb7b46debc0ee54ec7b5ff371198c944440.jpg);"></div>
+					<div class="item-thumb bg-yellow" style="background-image:url(https://p0.meituan.net/movie/da4eb7b46debc0ee54ec7b5ff371198c944440.jpg);"></div>
 					<a href="/2018/12/14/wangluomizong/">
                         <div class="item-desc">
                             
@@ -363,7 +406,7 @@
 								</span>
 							</div>
 							
-                            <div class="item-meta-ico bg-ico-book" style="background: url(/images/bg-ico.png) no-repeat;background-size: 40px auto;"></div>
+                            <div class="item-meta-ico bg-ico-link" style="background: url(/images/bg-ico.png) no-repeat;background-size: 40px auto;"></div>
                             <div class="item-meta-cat">
                                 
                                 <a href="/categories/剧情/">剧情</a>
@@ -379,7 +422,7 @@
 			
             <div class="post-list-item">
 				<div class="post-list-item-container">
-					<div class="item-thumb bg-red" style="background-image:url(https://p0.meituan.net/movie/5989b89d4ad812640975e1b44086bd59119333.jpg);"></div>
+					<div class="item-thumb bg-green" style="background-image:url(https://p0.meituan.net/movie/5989b89d4ad812640975e1b44086bd59119333.jpg);"></div>
 					<a href="/2018/12/14/yinduhehuoren/">
                         <div class="item-desc">
                             
@@ -389,7 +432,7 @@
                             
 						</div>
 					</a>
-					<div class="item-slant reverse-slant bg-orange"></div>
+					<div class="item-slant reverse-slant bg-yellow"></div>
 					<div class="item-slant"></div>
 					<div class="item-label">
 						<div class="item-title"><a href="/2018/12/14/yinduhehuoren/">印度合伙人</a></div>
@@ -401,7 +444,7 @@
 								</span>
 							</div>
 							
-                            <div class="item-meta-ico bg-ico-game" style="background: url(/images/bg-ico.png) no-repeat;background-size: 40px auto;"></div>
+                            <div class="item-meta-ico bg-ico-image" style="background: url(/images/bg-ico.png) no-repeat;background-size: 40px auto;"></div>
                             <div class="item-meta-cat">
                                 
                                 <a href="/categories/剧情/">剧情</a>
@@ -417,7 +460,7 @@
 			
             <div class="post-list-item">
 				<div class="post-list-item-container">
-					<div class="item-thumb bg-purple" style="background-image:url(https://p0.meituan.net/movie/2711a29f01c2f3478c30e4e172b8f414199236.jpg);"></div>
+					<div class="item-thumb bg-green" style="background-image:url(https://p0.meituan.net/movie/2711a29f01c2f3478c30e4e172b8f414199236.jpg);"></div>
 					<a href="/2018/12/02/juedisuizhan/">
                         <div class="item-desc">
                             
@@ -427,7 +470,7 @@ PMC意指军工企业。影片讲述了在南北关系紧张时期，板门店�
                             
 						</div>
 					</a>
-					<div class="item-slant reverse-slant bg-orange"></div>
+					<div class="item-slant reverse-slant bg-red"></div>
 					<div class="item-slant"></div>
 					<div class="item-label">
 						<div class="item-title"><a href="/2018/12/02/juedisuizhan/">绝地隧战</a></div>
@@ -439,7 +482,7 @@ PMC意指军工企业。影片讲述了在南北关系紧张时期，板门店�
 								</span>
 							</div>
 							
-                            <div class="item-meta-ico bg-ico-link" style="background: url(/images/bg-ico.png) no-repeat;background-size: 40px auto;"></div>
+                            <div class="item-meta-ico bg-ico-image" style="background: url(/images/bg-ico.png) no-repeat;background-size: 40px auto;"></div>
                             <div class="item-meta-cat">
                                 
                                 <a href="/categories/剧情/">剧情</a>
@@ -490,7 +533,7 @@ PMC意指军工企业。影片讲述了在南北关系紧张时期，板门店�
                         <p id="chakhsu"></p>
                     	<p>Theme is <a href="https://github.com/cccyb/hexo-theme-pinghsu" target="_blank">Pinghsu</a> by <a href="https://m.wiredtiger.org" target="_blank">小H</a></p>
 						<p>Powered by <a href="https://hexo.io/" target="_blank" rel="nofollow">hexo</a></p>
-                        <p style="margin-top: 10px">站点总字数：23.2k</p>
+                        <p style="margin-top: 10px">站点总字数：23.1k</p>
                         
                        
                         

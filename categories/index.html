@@ -57,6 +57,49 @@
 
 </head>
 <body class="bg-grey" gtools_scp_screen_capture_injected="true">
+<!-- weixinTip -->
+<style type="text/css">
+    *{margin:0; padding:0;}
+    img{max-width: 100%; height: auto;}
+    .test{height: 600px; max-width: 600px; font-size: 40px;}
+</style>
+<script type="text/javascript">
+    function is_weixin() {
+        var ua = navigator.userAgent.toLowerCase();
+        if (ua.match(/MicroMessenger/i) == "micromessenger") {
+            return true;
+        } else {
+            return false;
+        }
+    }
+    var isWeixin = is_weixin();
+    var winHeight = typeof window.innerHeight != 'undefined' ? window.innerHeight : document.documentElement.clientHeight;
+    function loadHtml(){
+        var div = document.createElement('div');
+        div.id = 'weixin-tip';
+        div.innerHTML = '<p><img src="/images/live_weixin.png" alt="微信打开"/></p>';
+        document.body.appendChild(div);
+    }
+    
+    function loadStyleText(cssText) {
+        var style = document.createElement('style');
+        style.rel = 'stylesheet';
+        style.type = 'text/css';
+        try {
+            style.appendChild(document.createTextNode(cssText));
+        } catch (e) {
+            style.styleSheet.cssText = cssText; //ie9以下
+        }
+        var head=document.getElementsByTagName("head")[0]; //head标签之间加上style样式
+        head.appendChild(style); 
+    }
+    var cssText = "#weixin-tip{position: fixed; left:0; top:0; background: rgba(0,0,0,0.8); filter:alpha(opacity=80); width: 100%; height:100%; z-index: 100;} #weixin-tip p{text-align: center; margin-top: 10%; padding:0 5%;}";
+    if(isWeixin){
+        loadHtml();
+        loadStyleText(cssText);
+    }
+</script>
+
 <!--[if lt IE 8]>
 <div class="browsehappy" role="dialog">
     当前网页 <strong>不支持</strong> 你正在使用的浏览器. 为了正常的访问, 请 <a href="http://browsehappy.com/" target="_blank">升级你的浏览器</a>。
@@ -187,6 +230,94 @@
     
     <div class="categorys-item">
         <div class="categorys-title">
+            <a href="/categories/动作/">动作</a><span> ：7</span>
+        </div>
+        <div class="post-lists">
+            <div class="post-lists-body">
+                
+                <div class="post-list-item">
+                    <div class="post-list-item-container">
+                        <div class="item-label">
+                            <div class="item-title"><a href="/2019/08/30/chenmodezhengren/">沉默的证人</a></div>
+                            <div class="item-meta clearfix">
+                                <div class="item-meta-date"> Aug 30, 2019 </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="post-list-item">
+                    <div class="post-list-item-container">
+                        <div class="item-label">
+                            <div class="item-title"><a href="/2019/09/21/erfeng/">二凤</a></div>
+                            <div class="item-meta clearfix">
+                                <div class="item-meta-date"> Sep 21, 2019 </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="post-list-item">
+                    <div class="post-list-item-container">
+                        <div class="item-label">
+                            <div class="item-title"><a href="/2019/08/25/fawaizhiwang/">法外之王</a></div>
+                            <div class="item-meta clearfix">
+                                <div class="item-meta-date"> Aug 25, 2019 </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="post-list-item">
+                    <div class="post-list-item-container">
+                        <div class="item-label">
+                            <div class="item-title"><a href="/2010/12/22/huanghai/">黄海</a></div>
+                            <div class="item-meta clearfix">
+                                <div class="item-meta-date"> Dec 22, 2010 </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="post-list-item">
+                    <div class="post-list-item-container">
+                        <div class="item-label">
+                            <div class="item-title"><a href="/2019/10/22/joker/">小丑</a></div>
+                            <div class="item-meta clearfix">
+                                <div class="item-meta-date"> Oct 22, 2019 </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="post-list-item">
+                    <div class="post-list-item-container">
+                        <div class="item-label">
+                            <div class="item-title"><a href="/2013/07/31/kongbuzhibo/">恐怖直播</a></div>
+                            <div class="item-meta clearfix">
+                                <div class="item-meta-date"> Jul 31, 2013 </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="post-list-item">
+                    <div class="post-list-item-container">
+                        <div class="item-label">
+                            <div class="item-title"><a href="/2020/02/09/yewen4/">叶问4：完结篇</a></div>
+                            <div class="item-meta clearfix">
+                                <div class="item-meta-date"> Feb 09, 2020 </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    
+    <div class="categorys-item">
+        <div class="categorys-title">
             <a href="/categories/战争/">战争</a><span> ：3</span>
         </div>
         <div class="post-lists">
@@ -231,94 +362,6 @@
     
     <div class="categorys-item">
         <div class="categorys-title">
-            <a href="/categories/动作/">动作</a><span> ：7</span>
-        </div>
-        <div class="post-lists">
-            <div class="post-lists-body">
-                
-                <div class="post-list-item">
-                    <div class="post-list-item-container">
-                        <div class="item-label">
-                            <div class="item-title"><a href="/2019/08/30/chenmodezhengren/">沉默的证人</a></div>
-                            <div class="item-meta clearfix">
-                                <div class="item-meta-date"> Aug 30, 2019 </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="post-list-item">
-                    <div class="post-list-item-container">
-                        <div class="item-label">
-                            <div class="item-title"><a href="/2019/09/21/erfeng/">二凤</a></div>
-                            <div class="item-meta clearfix">
-                                <div class="item-meta-date"> Sep 21, 2019 </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="post-list-item">
-                    <div class="post-list-item-container">
-                        <div class="item-label">
-                            <div class="item-title"><a href="/2010/12/22/huanghai/">黄海</a></div>
-                            <div class="item-meta clearfix">
-                                <div class="item-meta-date"> Dec 22, 2010 </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="post-list-item">
-                    <div class="post-list-item-container">
-                        <div class="item-label">
-                            <div class="item-title"><a href="/2019/10/22/joker/">小丑</a></div>
-                            <div class="item-meta clearfix">
-                                <div class="item-meta-date"> Oct 22, 2019 </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="post-list-item">
-                    <div class="post-list-item-container">
-                        <div class="item-label">
-                            <div class="item-title"><a href="/2013/07/31/kongbuzhibo/">恐怖直播</a></div>
-                            <div class="item-meta clearfix">
-                                <div class="item-meta-date"> Jul 31, 2013 </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="post-list-item">
-                    <div class="post-list-item-container">
-                        <div class="item-label">
-                            <div class="item-title"><a href="/2019/08/25/fawaizhiwang/">法外之王</a></div>
-                            <div class="item-meta clearfix">
-                                <div class="item-meta-date"> Aug 25, 2019 </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="post-list-item">
-                    <div class="post-list-item-container">
-                        <div class="item-label">
-                            <div class="item-title"><a href="/2020/02/09/yewen4/">叶问4：完结篇</a></div>
-                            <div class="item-meta clearfix">
-                                <div class="item-meta-date"> Feb 09, 2020 </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-            </div>
-        </div>
-    </div>
-    
-    <div class="categorys-item">
-        <div class="categorys-title">
             <a href="/categories/剧情/">剧情</a><span> ：32</span>
         </div>
         <div class="post-lists">
@@ -330,17 +373,6 @@
                             <div class="item-title"><a href="/2011/11/02/chubukeji/">触不可及</a></div>
                             <div class="item-meta clearfix">
                                 <div class="item-meta-date"> Nov 02, 2011 </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="post-list-item">
-                    <div class="post-list-item-container">
-                        <div class="item-label">
-                            <div class="item-title"><a href="/2008/01/17/dangxingfulaiqiaomen/">当幸福来敲门</a></div>
-                            <div class="item-meta clearfix">
-                                <div class="item-meta-date"> Jan 17, 2008 </div>
                             </div>
                         </div>
                     </div>
@@ -404,17 +436,6 @@
                 <div class="post-list-item">
                     <div class="post-list-item-container">
                         <div class="item-label">
-                            <div class="item-title"><a href="/2019/06/13/jueshamunihei/">绝杀慕尼黑</a></div>
-                            <div class="item-meta clearfix">
-                                <div class="item-meta-date"> Jun 13, 2019 </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="post-list-item">
-                    <div class="post-list-item-container">
-                        <div class="item-label">
                             <div class="item-title"><a href="/2019/10/22/liehuoyingxiong/">烈火英雄</a></div>
                             <div class="item-meta clearfix">
                                 <div class="item-meta-date"> Oct 22, 2019 </div>
@@ -426,9 +447,9 @@
                 <div class="post-list-item">
                     <div class="post-list-item-container">
                         <div class="item-label">
-                            <div class="item-title"><a href="/2019/08/27/lvcheng/">旅程</a></div>
+                            <div class="item-title"><a href="/2019/06/13/jueshamunihei/">绝杀慕尼黑</a></div>
                             <div class="item-meta clearfix">
-                                <div class="item-meta-date"> Aug 27, 2019 </div>
+                                <div class="item-meta-date"> Jun 13, 2019 </div>
                             </div>
                         </div>
                     </div>
@@ -448,20 +469,9 @@
                 <div class="post-list-item">
                     <div class="post-list-item-container">
                         <div class="item-label">
-                            <div class="item-title"><a href="/2019/10/22/mofangyouxi/">模仿游戏</a></div>
+                            <div class="item-title"><a href="/2019/08/27/lvcheng/">旅程</a></div>
                             <div class="item-meta clearfix">
-                                <div class="item-meta-date"> Oct 22, 2019 </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="post-list-item">
-                    <div class="post-list-item-container">
-                        <div class="item-label">
-                            <div class="item-title"><a href="/2019/12/08/pandengzhe/">攀登者</a></div>
-                            <div class="item-meta clearfix">
-                                <div class="item-meta-date"> Dec 08, 2019 </div>
+                                <div class="item-meta-date"> Aug 27, 2019 </div>
                             </div>
                         </div>
                     </div>
@@ -481,9 +491,20 @@
                 <div class="post-list-item">
                     <div class="post-list-item-container">
                         <div class="item-label">
-                            <div class="item-title"><a href="/2011/09/22/ronglu/">熔炉</a></div>
+                            <div class="item-title"><a href="/2019/12/08/pandengzhe/">攀登者</a></div>
                             <div class="item-meta clearfix">
-                                <div class="item-meta-date"> Sep 22, 2011 </div>
+                                <div class="item-meta-date"> Dec 08, 2019 </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="post-list-item">
+                    <div class="post-list-item-container">
+                        <div class="item-label">
+                            <div class="item-title"><a href="/2019/10/22/mofangyouxi/">模仿游戏</a></div>
+                            <div class="item-meta clearfix">
+                                <div class="item-meta-date"> Oct 22, 2019 </div>
                             </div>
                         </div>
                     </div>
@@ -525,6 +546,17 @@
                 <div class="post-list-item">
                     <div class="post-list-item-container">
                         <div class="item-label">
+                            <div class="item-title"><a href="/2011/09/22/ronglu/">熔炉</a></div>
+                            <div class="item-meta clearfix">
+                                <div class="item-meta-date"> Sep 22, 2011 </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="post-list-item">
+                    <div class="post-list-item-container">
+                        <div class="item-label">
                             <div class="item-title"><a href="/2019/10/22/songwoshangqingyun/">送我上青云</a></div>
                             <div class="item-meta clearfix">
                                 <div class="item-meta-date"> Oct 22, 2019 </div>
@@ -547,17 +579,6 @@
                 <div class="post-list-item">
                     <div class="post-list-item-container">
                         <div class="item-label">
-                            <div class="item-title"><a href="/2017/01/18/wangzhe/">王者</a></div>
-                            <div class="item-meta clearfix">
-                                <div class="item-meta-date"> Jan 18, 2017 </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="post-list-item">
-                    <div class="post-list-item-container">
-                        <div class="item-label">
                             <div class="item-title"><a href="/2012/11/16/wanjianchuanxin/">万箭穿心</a></div>
                             <div class="item-meta clearfix">
                                 <div class="item-meta-date"> Nov 16, 2012 </div>
@@ -569,9 +590,9 @@
                 <div class="post-list-item">
                     <div class="post-list-item-container">
                         <div class="item-label">
-                            <div class="item-title"><a href="/2019/06/24/womenyuedejuli/">我们与恶的距离</a></div>
+                            <div class="item-title"><a href="/2017/01/18/wangzhe/">王者</a></div>
                             <div class="item-meta clearfix">
-                                <div class="item-meta-date"> Jun 24, 2019 </div>
+                                <div class="item-meta-date"> Jan 18, 2017 </div>
                             </div>
                         </div>
                     </div>
@@ -591,20 +612,9 @@
                 <div class="post-list-item">
                     <div class="post-list-item-container">
                         <div class="item-label">
-                            <div class="item-title"><a href="/2019/12/22/wurenqu/">无人区</a></div>
+                            <div class="item-title"><a href="/2019/06/24/womenyuedejuli/">我们与恶的距离</a></div>
                             <div class="item-meta clearfix">
-                                <div class="item-meta-date"> Dec 22, 2019 </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="post-list-item">
-                    <div class="post-list-item-container">
-                        <div class="item-label">
-                            <div class="item-title"><a href="/1994/09/10/xiaoshenkedejiushu/">肖申克的救赎</a></div>
-                            <div class="item-meta clearfix">
-                                <div class="item-meta-date"> Sep 10, 1994 </div>
+                                <div class="item-meta-date"> Jun 24, 2019 </div>
                             </div>
                         </div>
                     </div>
@@ -624,9 +634,9 @@
                 <div class="post-list-item">
                     <div class="post-list-item-container">
                         <div class="item-label">
-                            <div class="item-title"><a href="/2018/12/14/yinduhehuoren/">印度合伙人</a></div>
+                            <div class="item-title"><a href="/1994/09/10/xiaoshenkedejiushu/">肖申克的救赎</a></div>
                             <div class="item-meta clearfix">
-                                <div class="item-meta-date"> Dec 14, 2018 </div>
+                                <div class="item-meta-date"> Sep 10, 1994 </div>
                             </div>
                         </div>
                     </div>
@@ -635,9 +645,20 @@
                 <div class="post-list-item">
                     <div class="post-list-item-container">
                         <div class="item-label">
-                            <div class="item-title"><a href="/1994/09/14/zhegeshashoubutaileng/">这个杀手不太冷</a></div>
+                            <div class="item-title"><a href="/2019/12/22/wurenqu/">无人区</a></div>
                             <div class="item-meta clearfix">
-                                <div class="item-meta-date"> Sep 14, 1994 </div>
+                                <div class="item-meta-date"> Dec 22, 2019 </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="post-list-item">
+                    <div class="post-list-item-container">
+                        <div class="item-label">
+                            <div class="item-title"><a href="/2018/12/14/yinduhehuoren/">印度合伙人</a></div>
+                            <div class="item-meta clearfix">
+                                <div class="item-meta-date"> Dec 14, 2018 </div>
                             </div>
                         </div>
                     </div>
@@ -657,9 +678,9 @@
                 <div class="post-list-item">
                     <div class="post-list-item-container">
                         <div class="item-label">
-                            <div class="item-title"><a href="/2019/12/08/zhongguojizhang/">中国机长</a></div>
+                            <div class="item-title"><a href="/1994/09/14/zhegeshashoubutaileng/">这个杀手不太冷</a></div>
                             <div class="item-meta clearfix">
-                                <div class="item-meta-date"> Dec 08, 2019 </div>
+                                <div class="item-meta-date"> Sep 14, 1994 </div>
                             </div>
                         </div>
                     </div>
@@ -671,6 +692,28 @@
                             <div class="item-title"><a href="/2019/11/16/zuichangyiqiang/">最长一枪</a></div>
                             <div class="item-meta clearfix">
                                 <div class="item-meta-date"> Nov 16, 2019 </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="post-list-item">
+                    <div class="post-list-item-container">
+                        <div class="item-label">
+                            <div class="item-title"><a href="/2019/12/08/zhongguojizhang/">中国机长</a></div>
+                            <div class="item-meta clearfix">
+                                <div class="item-meta-date"> Dec 08, 2019 </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="post-list-item">
+                    <div class="post-list-item-container">
+                        <div class="item-label">
+                            <div class="item-title"><a href="/2008/01/17/dangxingfulaiqiaomen/">当幸福来敲门</a></div>
+                            <div class="item-meta clearfix">
+                                <div class="item-meta-date"> Jan 17, 2008 </div>
                             </div>
                         </div>
                     </div>
@@ -734,9 +777,9 @@
                 <div class="post-list-item">
                     <div class="post-list-item-container">
                         <div class="item-label">
-                            <div class="item-title"><a href="/2015/06/26/tingshuo/">听说</a></div>
+                            <div class="item-title"><a href="/2019/01/11/whitesnake/">白蛇：缘起</a></div>
                             <div class="item-meta clearfix">
-                                <div class="item-meta-date"> Jun 26, 2015 </div>
+                                <div class="item-meta-date"> Jan 11, 2019 </div>
                             </div>
                         </div>
                     </div>
@@ -745,9 +788,9 @@
                 <div class="post-list-item">
                     <div class="post-list-item-container">
                         <div class="item-label">
-                            <div class="item-title"><a href="/2019/01/11/whitesnake/">白蛇：缘起</a></div>
+                            <div class="item-title"><a href="/2015/06/26/tingshuo/">听说</a></div>
                             <div class="item-meta clearfix">
-                                <div class="item-meta-date"> Jan 11, 2019 </div>
+                                <div class="item-meta-date"> Jun 26, 2015 </div>
                             </div>
                         </div>
                     </div>
@@ -866,9 +909,9 @@
                 <div class="post-list-item">
                     <div class="post-list-item-container">
                         <div class="item-label">
-                            <div class="item-title"><a href="/2010/12/16/rangzidanfei/">让子弹飞</a></div>
+                            <div class="item-title"><a href="/2015/10/30/shanheguren/">山河故人</a></div>
                             <div class="item-meta clearfix">
-                                <div class="item-meta-date"> Dec 16, 2010 </div>
+                                <div class="item-meta-date"> Oct 30, 2015 </div>
                             </div>
                         </div>
                     </div>
@@ -877,9 +920,9 @@
                 <div class="post-list-item">
                     <div class="post-list-item-container">
                         <div class="item-label">
-                            <div class="item-title"><a href="/2015/10/30/shanheguren/">山河故人</a></div>
+                            <div class="item-title"><a href="/2010/12/16/rangzidanfei/">让子弹飞</a></div>
                             <div class="item-meta clearfix">
-                                <div class="item-meta-date"> Oct 30, 2015 </div>
+                                <div class="item-meta-date"> Dec 16, 2010 </div>
                             </div>
                         </div>
                     </div>
@@ -965,9 +1008,9 @@
                 <div class="post-list-item">
                     <div class="post-list-item-container">
                         <div class="item-label">
-                            <div class="item-title"><a href="/2016/03/11/wobushiwangmao/">我不是王毛</a></div>
+                            <div class="item-title"><a href="/2018/11/09/wobushiyaoshen/">我不是药神</a></div>
                             <div class="item-meta clearfix">
-                                <div class="item-meta-date"> Mar 11, 2016 </div>
+                                <div class="item-meta-date"> Nov 09, 2018 </div>
                             </div>
                         </div>
                     </div>
@@ -976,9 +1019,9 @@
                 <div class="post-list-item">
                     <div class="post-list-item-container">
                         <div class="item-label">
-                            <div class="item-title"><a href="/2018/11/09/wobushiyaoshen/">我不是药神</a></div>
+                            <div class="item-title"><a href="/2016/03/11/wobushiwangmao/">我不是王毛</a></div>
                             <div class="item-meta clearfix">
-                                <div class="item-meta-date"> Nov 09, 2018 </div>
+                                <div class="item-meta-date"> Mar 11, 2016 </div>
                             </div>
                         </div>
                     </div>
@@ -1337,7 +1380,7 @@
                         <p id="chakhsu"></p>
                     	<p>Theme is <a href="https://github.com/cccyb/hexo-theme-pinghsu" target="_blank">Pinghsu</a> by <a href="https://m.wiredtiger.org" target="_blank">小H</a></p>
 						<p>Powered by <a href="https://hexo.io/" target="_blank" rel="nofollow">hexo</a></p>
-                        <p style="margin-top: 10px">站点总字数：23.2k</p>
+                        <p style="margin-top: 10px">站点总字数：23.1k</p>
                         
                        
                         

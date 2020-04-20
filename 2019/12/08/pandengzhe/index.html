@@ -56,6 +56,49 @@
 
 </head>
 <body class="bg-white" gtools_scp_screen_capture_injected="true">
+<!-- weixinTip -->
+<style type="text/css">
+    *{margin:0; padding:0;}
+    img{max-width: 100%; height: auto;}
+    .test{height: 600px; max-width: 600px; font-size: 40px;}
+</style>
+<script type="text/javascript">
+    function is_weixin() {
+        var ua = navigator.userAgent.toLowerCase();
+        if (ua.match(/MicroMessenger/i) == "micromessenger") {
+            return true;
+        } else {
+            return false;
+        }
+    }
+    var isWeixin = is_weixin();
+    var winHeight = typeof window.innerHeight != 'undefined' ? window.innerHeight : document.documentElement.clientHeight;
+    function loadHtml(){
+        var div = document.createElement('div');
+        div.id = 'weixin-tip';
+        div.innerHTML = '<p><img src="/images/live_weixin.png" alt="微信打开"/></p>';
+        document.body.appendChild(div);
+    }
+    
+    function loadStyleText(cssText) {
+        var style = document.createElement('style');
+        style.rel = 'stylesheet';
+        style.type = 'text/css';
+        try {
+            style.appendChild(document.createTextNode(cssText));
+        } catch (e) {
+            style.styleSheet.cssText = cssText; //ie9以下
+        }
+        var head=document.getElementsByTagName("head")[0]; //head标签之间加上style样式
+        head.appendChild(style); 
+    }
+    var cssText = "#weixin-tip{position: fixed; left:0; top:0; background: rgba(0,0,0,0.8); filter:alpha(opacity=80); width: 100%; height:100%; z-index: 100;} #weixin-tip p{text-align: center; margin-top: 10%; padding:0 5%;}";
+    if(isWeixin){
+        loadHtml();
+        loadStyleText(cssText);
+    }
+</script>
+
 <!--[if lt IE 8]>
 <div class="browsehappy" role="dialog">
     当前网页 <strong>不支持</strong> 你正在使用的浏览器. 为了正常的访问, 请 <a href="http://browsehappy.com/" target="_blank">升级你的浏览器</a>。
@@ -107,7 +150,7 @@
 
 
 <div class="post-header-thumb">
-	<div class="post-header-thumb-op" style="background-image:url(/images/thumbs/15.jpg);"></div>
+	<div class="post-header-thumb-op" style="background-image:url(/images/thumbs/10.jpg);"></div>
 	<div class="post-header-thumb-cover">
 		<div class="post-header-thumb-container">
 			<div class="post-header-thumb-title">
@@ -126,7 +169,7 @@
 				
 				<!--
 				<div class="post-header-thumb-meta" style="font-size: 13px;">
-					<span class="post-count">本文字数：156 字</span>
+					<span class="post-count">本文字数：140 字</span>
 					<span>|</span>
 					<span class="post-count">阅读时长 ≈ 1 min</span>
 				</div>
@@ -162,7 +205,7 @@
 			with <a id="page-title-comment" href="#vcomments"></a>
 			
 			<div style="font-size: 13px;">
-				<span class="post-count">本文字数：156 字</span>
+				<span class="post-count">本文字数：140 字</span>
 				<span>|</span>
 				<span class="post-count">阅读时长 ≈ 1 min</span>
 			</div>
@@ -189,7 +232,7 @@
 <div id="decryptionError" style="display: none;">Incorrect Password!</div>
 <div id="noContentError" style="display: none;">No content to display!</div>
 <div id="encrypt-blog" style="display:none">
-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
+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
 </div>
 <script src="/lib/crypto-js.js"></script><script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">
 		
@@ -232,7 +275,7 @@ U2FsdGVkX1+wcfZ1obB+MY62/SdymlkLNLpnBn/NAH/rs1dHo1/UupdJWU8j3JZSLJWMvE5UihGnfZUn
             <span class="bottom-bar-item"><a href="/2019/12/22/wurenqu/">←</a></span>
             
             
-            <span class="bottom-bar-item"><a href="/2019/12/08/zhongguojizhang/">→</a></span>
+            <span class="bottom-bar-item"><a href="/2019/12/08/jueshengshike/">→</a></span>
             
 			<span class="bottom-bar-item"><a href="#footer">↓</a></span>
 			<span class="bottom-bar-item"><a href="#">↑</a></span>
@@ -251,7 +294,7 @@ U2FsdGVkX1+wcfZ1obB+MY62/SdymlkLNLpnBn/NAH/rs1dHo1/UupdJWU8j3JZSLJWMvE5UihGnfZUn
 						<div class="item-title"><a href="/2019/02/05/liulangdiqiu/">流浪地球</a></div>
 						<div class="item-meta clearfix">
 							<div class="item-meta-date" style="color: #5f5f5f;">Feb 05, 2019</div>
-							<div class="item-meta-ico bg-ico-image" style="background: url(/images/bg-ico.png) no-repeat;background-size: 40px auto;"></div>
+							<div class="item-meta-ico bg-ico-code" style="background: url(/images/bg-ico.png) no-repeat;background-size: 40px auto;"></div>
                             <div class="item-meta-cat">
                                 
                                 <a href="/categories/科幻/">科幻</a>
@@ -300,7 +343,7 @@ U2FsdGVkX1+wcfZ1obB+MY62/SdymlkLNLpnBn/NAH/rs1dHo1/UupdJWU8j3JZSLJWMvE5UihGnfZUn
                         <p id="chakhsu"></p>
                     	<p>Theme is <a href="https://github.com/cccyb/hexo-theme-pinghsu" target="_blank">Pinghsu</a> by <a href="https://m.wiredtiger.org" target="_blank">小H</a></p>
 						<p>Powered by <a href="https://hexo.io/" target="_blank" rel="nofollow">hexo</a></p>
-                        <p style="margin-top: 10px">站点总字数：23.2k</p>
+                        <p style="margin-top: 10px">站点总字数：23.1k</p>
                         
                        
                         

@@ -56,6 +56,49 @@
 
 </head>
 <body class="bg-grey" gtools_scp_screen_capture_injected="true">
+<!-- weixinTip -->
+<style type="text/css">
+    *{margin:0; padding:0;}
+    img{max-width: 100%; height: auto;}
+    .test{height: 600px; max-width: 600px; font-size: 40px;}
+</style>
+<script type="text/javascript">
+    function is_weixin() {
+        var ua = navigator.userAgent.toLowerCase();
+        if (ua.match(/MicroMessenger/i) == "micromessenger") {
+            return true;
+        } else {
+            return false;
+        }
+    }
+    var isWeixin = is_weixin();
+    var winHeight = typeof window.innerHeight != 'undefined' ? window.innerHeight : document.documentElement.clientHeight;
+    function loadHtml(){
+        var div = document.createElement('div');
+        div.id = 'weixin-tip';
+        div.innerHTML = '<p><img src="/images/live_weixin.png" alt="微信打开"/></p>';
+        document.body.appendChild(div);
+    }
+    
+    function loadStyleText(cssText) {
+        var style = document.createElement('style');
+        style.rel = 'stylesheet';
+        style.type = 'text/css';
+        try {
+            style.appendChild(document.createTextNode(cssText));
+        } catch (e) {
+            style.styleSheet.cssText = cssText; //ie9以下
+        }
+        var head=document.getElementsByTagName("head")[0]; //head标签之间加上style样式
+        head.appendChild(style); 
+    }
+    var cssText = "#weixin-tip{position: fixed; left:0; top:0; background: rgba(0,0,0,0.8); filter:alpha(opacity=80); width: 100%; height:100%; z-index: 100;} #weixin-tip p{text-align: center; margin-top: 10%; padding:0 5%;}";
+    if(isWeixin){
+        loadHtml();
+        loadStyleText(cssText);
+    }
+</script>
+
 <!--[if lt IE 8]>
 <div class="browsehappy" role="dialog">
     当前网页 <strong>不支持</strong> 你正在使用的浏览器. 为了正常的访问, 请 <a href="http://browsehappy.com/" target="_blank">升级你的浏览器</a>。
@@ -111,32 +154,32 @@
 			
             <div class="post-list-item">
 				<div class="post-list-item-container">
-					<div class="item-thumb bg-green" style="background-image:url(https://p0.meituan.net/movie/005955214d5b3e50c910d7a511b0cb571445301.jpg);"></div>
-					<a href="/2019/10/22/nezha/">
+					<div class="item-thumb bg-green" style="background-image:url(https://p0.meituan.net/movie/f75fcb7696d55452e32794b2219700b9840805.jpg);"></div>
+					<a href="/2019/10/22/liehuoyingxiong/">
                         <div class="item-desc">
                             
                             <p>
 简介
-天地灵气孕育出一颗能量巨大的混元珠，元始天尊将混元珠提炼成灵珠和魔丸，灵珠投胎为人，助周伐纣时可堪大用；而魔丸则会诞出魔王，为祸人间。元...</p>
+滨港市海港码头发生管道爆炸，整个罐区的原油都顺着A01油罐往外流，化成火海和阵阵爆炸，威胁全市、全省，甚至邻国的安全。慌乱的市民们四处奔...</p>
                             
 						</div>
 					</a>
-					<div class="item-slant reverse-slant bg-purple"></div>
+					<div class="item-slant reverse-slant bg-red"></div>
 					<div class="item-slant"></div>
 					<div class="item-label">
-						<div class="item-title"><a href="/2019/10/22/nezha/">哪吒之魔童降世</a></div>
+						<div class="item-title"><a href="/2019/10/22/liehuoyingxiong/">烈火英雄</a></div>
 						<div class="item-meta clearfix">
 							
 							<div class="item-meta-date" style="color: #313131; padding-top: 10px; font-size: 13px;">
-								<span id="/2019/10/22/nezha/" class="leancloud-visitors" data-flag-title="哪吒之魔童降世">
+								<span id="/2019/10/22/liehuoyingxiong/" class="leancloud-visitors" data-flag-title="烈火英雄">
 									<span class="leancloud-visitors-count">0</span> Views 
 								</span>
 							</div>
 							
-                            <div class="item-meta-ico bg-ico-design" style="background: url(/images/bg-ico.png) no-repeat;background-size: 40px auto;"></div>
+                            <div class="item-meta-ico bg-ico-note" style="background: url(/images/bg-ico.png) no-repeat;background-size: 40px auto;"></div>
                             <div class="item-meta-cat">
                                 
-                                <a href="/categories/动画/">动画</a>
+                                <a href="/categories/剧情/">剧情</a>
 								
                             </div>
 						</div>
@@ -149,7 +192,7 @@
 			
             <div class="post-list-item">
 				<div class="post-list-item-container">
-					<div class="item-thumb bg-yellow" style="background-image:url(https://p1.meituan.net/movie/1a219d4d166c475de3c093b7c7c667323053380.jpg);"></div>
+					<div class="item-thumb bg-red" style="background-image:url(https://p1.meituan.net/movie/1a219d4d166c475de3c093b7c7c667323053380.jpg);"></div>
 					<a href="/2019/09/21/erfeng/">
                         <div class="item-desc">
                             
@@ -159,7 +202,7 @@
                             
 						</div>
 					</a>
-					<div class="item-slant reverse-slant bg-orange"></div>
+					<div class="item-slant reverse-slant bg-purple"></div>
 					<div class="item-slant"></div>
 					<div class="item-label">
 						<div class="item-title"><a href="/2019/09/21/erfeng/">二凤</a></div>
@@ -171,7 +214,7 @@
 								</span>
 							</div>
 							
-                            <div class="item-meta-ico bg-ico-image" style="background: url(/images/bg-ico.png) no-repeat;background-size: 40px auto;"></div>
+                            <div class="item-meta-ico bg-ico-link" style="background: url(/images/bg-ico.png) no-repeat;background-size: 40px auto;"></div>
                             <div class="item-meta-cat">
                                 
                                 <a href="/categories/动作/">动作</a>
@@ -187,7 +230,7 @@
 			
             <div class="post-list-item">
 				<div class="post-list-item-container">
-					<div class="item-thumb bg-green" style="background-image:url(https://p0.meituan.net/movie/1894c80544ced052a26dd4e573f177e134690.jpg);"></div>
+					<div class="item-thumb bg-red" style="background-image:url(https://p0.meituan.net/movie/1894c80544ced052a26dd4e573f177e134690.jpg);"></div>
 					<a href="/2019/09/14/jixiantaosheng/">
                         <div class="item-desc">
                             
@@ -199,7 +242,7 @@
                             
 						</div>
 					</a>
-					<div class="item-slant reverse-slant bg-purple"></div>
+					<div class="item-slant reverse-slant bg-red"></div>
 					<div class="item-slant"></div>
 					<div class="item-label">
 						<div class="item-title"><a href="/2019/09/14/jixiantaosheng/">极限逃生</a></div>
@@ -211,7 +254,7 @@
 								</span>
 							</div>
 							
-                            <div class="item-meta-ico bg-ico-design" style="background: url(/images/bg-ico.png) no-repeat;background-size: 40px auto;"></div>
+                            <div class="item-meta-ico bg-ico-book" style="background: url(/images/bg-ico.png) no-repeat;background-size: 40px auto;"></div>
                             <div class="item-meta-cat">
                                 
                                 <a href="/categories/喜剧/">喜剧</a>
@@ -227,7 +270,7 @@
 			
             <div class="post-list-item">
 				<div class="post-list-item-container">
-					<div class="item-thumb bg-orange" style="background-image:url(https://p0.meituan.net/movie/bf65cea954d7f94d46efd73ade146fb5195012.jpg);"></div>
+					<div class="item-thumb bg-yellow" style="background-image:url(https://p0.meituan.net/movie/bf65cea954d7f94d46efd73ade146fb5195012.jpg);"></div>
 					<a href="/2019/09/01/woshisui/">
                         <div class="item-desc">
                             
@@ -249,10 +292,48 @@
 								</span>
 							</div>
 							
-                            <div class="item-meta-ico bg-ico-note" style="background: url(/images/bg-ico.png) no-repeat;background-size: 40px auto;"></div>
+                            <div class="item-meta-ico bg-ico-code" style="background: url(/images/bg-ico.png) no-repeat;background-size: 40px auto;"></div>
                             <div class="item-meta-cat">
                                 
                                 <a href="/categories/悬疑/">悬疑</a>
+								
+                            </div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			
+        
+			
+            <div class="post-list-item">
+				<div class="post-list-item-container">
+					<div class="item-thumb bg-green" style="background-image:url(https://p1.meituan.net/movie/a2a287c77415dc1f85b04d288f7d63ab1089754.jpg);"></div>
+					<a href="/2019/09/01/zhengjiudabing/">
+                        <div class="item-desc">
+                            
+                            <p>
+简介
+瑞恩（马特·达蒙 饰 ）是二战期间的美国伞兵，被困在了敌人后方。更不幸的是，他的三个兄弟全部在战争中死亡，如果他也遇难，家中的老母亲将无...</p>
+                            
+						</div>
+					</a>
+					<div class="item-slant reverse-slant bg-purple"></div>
+					<div class="item-slant"></div>
+					<div class="item-label">
+						<div class="item-title"><a href="/2019/09/01/zhengjiudabing/">拯救大兵瑞恩</a></div>
+						<div class="item-meta clearfix">
+							
+							<div class="item-meta-date" style="color: #313131; padding-top: 10px; font-size: 13px;">
+								<span id="/2019/09/01/zhengjiudabing/" class="leancloud-visitors" data-flag-title="拯救大兵瑞恩">
+									<span class="leancloud-visitors-count">0</span> Views 
+								</span>
+							</div>
+							
+                            <div class="item-meta-ico bg-ico-note" style="background: url(/images/bg-ico.png) no-repeat;background-size: 40px auto;"></div>
+                            <div class="item-meta-cat">
+                                
+                                <a href="/categories/战争片/">战争片</a>
 								
                             </div>
 						</div>
@@ -275,7 +356,7 @@
                             
 						</div>
 					</a>
-					<div class="item-slant reverse-slant bg-green"></div>
+					<div class="item-slant reverse-slant bg-purple"></div>
 					<div class="item-slant"></div>
 					<div class="item-label">
 						<div class="item-title"><a href="/2019/09/01/binglinchengxia/">兵临城下</a></div>
@@ -303,7 +384,7 @@
 			
             <div class="post-list-item">
 				<div class="post-list-item-container">
-					<div class="item-thumb bg-purple" style="background-image:url(https://p0.meituan.net/movie/85fca6d99e97c9e3281254a1ed453c423114570.jpg);"></div>
+					<div class="item-thumb bg-green" style="background-image:url(https://p0.meituan.net/movie/85fca6d99e97c9e3281254a1ed453c423114570.jpg);"></div>
 					<a href="/2019/09/01/heiyingzhuiluo/">
                         <div class="item-desc">
                             
@@ -313,7 +394,7 @@
                             
 						</div>
 					</a>
-					<div class="item-slant reverse-slant bg-purple"></div>
+					<div class="item-slant reverse-slant bg-green"></div>
 					<div class="item-slant"></div>
 					<div class="item-label">
 						<div class="item-title"><a href="/2019/09/01/heiyingzhuiluo/">黑鹰坠落</a></div>
@@ -341,24 +422,62 @@
 			
             <div class="post-list-item">
 				<div class="post-list-item-container">
-					<div class="item-thumb bg-purple" style="background-image:url(https://p1.meituan.net/movie/a2a287c77415dc1f85b04d288f7d63ab1089754.jpg);"></div>
-					<a href="/2019/09/01/zhengjiudabing/">
+					<div class="item-thumb bg-green" style="background-image:url(https://p0.meituan.net/movie/63bee28db4fae342f3565be1c14a7640125600.jpg);"></div>
+					<a href="/2019/08/30/gongfu/">
                         <div class="item-desc">
                             
                             <p>
 简介
-瑞恩（马特·达蒙 饰 ）是二战期间的美国伞兵，被困在了敌人后方。更不幸的是，他的三个兄弟全部在战争中死亡，如果他也遇难，家中的老母亲将无...</p>
+故事发生在20世纪40年代的中国，古惑仔阿星从小就受尽欺辱，立志出人头地，于是在世道上寻找各种机会。最近黑道势力“斧头帮”行动猖獗，引起...</p>
                             
 						</div>
 					</a>
 					<div class="item-slant reverse-slant bg-yellow"></div>
 					<div class="item-slant"></div>
 					<div class="item-label">
-						<div class="item-title"><a href="/2019/09/01/zhengjiudabing/">拯救大兵瑞恩</a></div>
+						<div class="item-title"><a href="/2019/08/30/gongfu/">功夫</a></div>
 						<div class="item-meta clearfix">
 							
 							<div class="item-meta-date" style="color: #313131; padding-top: 10px; font-size: 13px;">
-								<span id="/2019/09/01/zhengjiudabing/" class="leancloud-visitors" data-flag-title="拯救大兵瑞恩">
+								<span id="/2019/08/30/gongfu/" class="leancloud-visitors" data-flag-title="功夫">
+									<span class="leancloud-visitors-count">0</span> Views 
+								</span>
+							</div>
+							
+                            <div class="item-meta-ico bg-ico-game" style="background: url(/images/bg-ico.png) no-repeat;background-size: 40px auto;"></div>
+                            <div class="item-meta-cat">
+                                
+                                <a href="/categories/喜剧/">喜剧</a>
+								
+                            </div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			
+        
+			
+            <div class="post-list-item">
+				<div class="post-list-item-container">
+					<div class="item-thumb bg-red" style="background-image:url(https://p0.meituan.net/movie/da2e699281772a93cd8d927ad0c63c4170057.jpg);"></div>
+					<a href="/2019/08/30/siwangshishe/">
+                        <div class="item-desc">
+                            
+                            <p>
+简介
+威尔顿预备学院以其沉稳凝重的教学风格和较高的升学率闻名，作为其毕业班的学生，理想就是升入名校。新学期文学老师约翰·吉汀（罗宾斯·威廉姆斯...</p>
+                            
+						</div>
+					</a>
+					<div class="item-slant reverse-slant bg-blue"></div>
+					<div class="item-slant"></div>
+					<div class="item-label">
+						<div class="item-title"><a href="/2019/08/30/siwangshishe/">死亡诗社</a></div>
+						<div class="item-meta clearfix">
+							
+							<div class="item-meta-date" style="color: #313131; padding-top: 10px; font-size: 13px;">
+								<span id="/2019/08/30/siwangshishe/" class="leancloud-visitors" data-flag-title="死亡诗社">
 									<span class="leancloud-visitors-count">0</span> Views 
 								</span>
 							</div>
@@ -366,83 +485,7 @@
                             <div class="item-meta-ico bg-ico-code" style="background: url(/images/bg-ico.png) no-repeat;background-size: 40px auto;"></div>
                             <div class="item-meta-cat">
                                 
-                                <a href="/categories/战争片/">战争片</a>
-								
-                            </div>
-						</div>
-					</div>
-				</div>
-			</div>
-			
-			
-        
-			
-            <div class="post-list-item">
-				<div class="post-list-item-container">
-					<div class="item-thumb bg-green" style="background-image:url(https://p1.meituan.net/movie/8fde98b97a0a7049a1b6717bb4bfc497373551.jpg);"></div>
-					<a href="/2019/08/30/xinlingbushou/">
-                        <div class="item-desc">
-                            
-                            <p>
-简介
-麻省理工学院的数学教授蓝波在席上公布了一道困难的数学题，却被年轻的清洁工威尔（马特·戴蒙 饰）解了出来。可是威尔却是个问题少年，成天和好...</p>
-                            
-						</div>
-					</a>
-					<div class="item-slant reverse-slant bg-purple"></div>
-					<div class="item-slant"></div>
-					<div class="item-label">
-						<div class="item-title"><a href="/2019/08/30/xinlingbushou/">心灵捕手</a></div>
-						<div class="item-meta clearfix">
-							
-							<div class="item-meta-date" style="color: #313131; padding-top: 10px; font-size: 13px;">
-								<span id="/2019/08/30/xinlingbushou/" class="leancloud-visitors" data-flag-title="心灵捕手">
-									<span class="leancloud-visitors-count">0</span> Views 
-								</span>
-							</div>
-							
-                            <div class="item-meta-ico bg-ico-chat" style="background: url(/images/bg-ico.png) no-repeat;background-size: 40px auto;"></div>
-                            <div class="item-meta-cat">
-                                
-                                <a href="/categories/类型/">类型</a>
-								
-                            </div>
-						</div>
-					</div>
-				</div>
-			</div>
-			
-			
-        
-			
-            <div class="post-list-item">
-				<div class="post-list-item-container">
-					<div class="item-thumb bg-green" style="background-image:url(https://p1.meituan.net/movie/5dde9673a97f1e11540dc4c4cc78cbcb3314363.jpg);"></div>
-					<a href="/2019/08/30/shanghaibaolei/">
-                        <div class="item-desc">
-                            
-                            <p>
-简介
-未来世界外星黑暗势力突袭地球，上海成为了人类最后的希望。大学生江洋（鹿晗 饰）追随女指挥官林澜（舒淇 饰）进入了上海堡垒成为一名指挥员。...</p>
-                            
-						</div>
-					</a>
-					<div class="item-slant reverse-slant bg-red"></div>
-					<div class="item-slant"></div>
-					<div class="item-label">
-						<div class="item-title"><a href="/2019/08/30/shanghaibaolei/">上海堡垒</a></div>
-						<div class="item-meta clearfix">
-							
-							<div class="item-meta-date" style="color: #313131; padding-top: 10px; font-size: 13px;">
-								<span id="/2019/08/30/shanghaibaolei/" class="leancloud-visitors" data-flag-title="上海堡垒">
-									<span class="leancloud-visitors-count">0</span> Views 
-								</span>
-							</div>
-							
-                            <div class="item-meta-ico bg-ico-design" style="background: url(/images/bg-ico.png) no-repeat;background-size: 40px auto;"></div>
-                            <div class="item-meta-cat">
-                                
-                                <a href="/categories/科幻/">科幻</a>
+                                <a href="/categories/剧情/">剧情</a>
 								
                             </div>
 						</div>
@@ -490,7 +533,7 @@
                         <p id="chakhsu"></p>
                     	<p>Theme is <a href="https://github.com/cccyb/hexo-theme-pinghsu" target="_blank">Pinghsu</a> by <a href="https://m.wiredtiger.org" target="_blank">小H</a></p>
 						<p>Powered by <a href="https://hexo.io/" target="_blank" rel="nofollow">hexo</a></p>
-                        <p style="margin-top: 10px">站点总字数：23.2k</p>
+                        <p style="margin-top: 10px">站点总字数：23.1k</p>
                         
                        
                         

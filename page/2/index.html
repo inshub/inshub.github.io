@@ -56,6 +56,49 @@
 
 </head>
 <body class="bg-grey" gtools_scp_screen_capture_injected="true">
+<!-- weixinTip -->
+<style type="text/css">
+    *{margin:0; padding:0;}
+    img{max-width: 100%; height: auto;}
+    .test{height: 600px; max-width: 600px; font-size: 40px;}
+</style>
+<script type="text/javascript">
+    function is_weixin() {
+        var ua = navigator.userAgent.toLowerCase();
+        if (ua.match(/MicroMessenger/i) == "micromessenger") {
+            return true;
+        } else {
+            return false;
+        }
+    }
+    var isWeixin = is_weixin();
+    var winHeight = typeof window.innerHeight != 'undefined' ? window.innerHeight : document.documentElement.clientHeight;
+    function loadHtml(){
+        var div = document.createElement('div');
+        div.id = 'weixin-tip';
+        div.innerHTML = '<p><img src="/images/live_weixin.png" alt="微信打开"/></p>';
+        document.body.appendChild(div);
+    }
+    
+    function loadStyleText(cssText) {
+        var style = document.createElement('style');
+        style.rel = 'stylesheet';
+        style.type = 'text/css';
+        try {
+            style.appendChild(document.createTextNode(cssText));
+        } catch (e) {
+            style.styleSheet.cssText = cssText; //ie9以下
+        }
+        var head=document.getElementsByTagName("head")[0]; //head标签之间加上style样式
+        head.appendChild(style); 
+    }
+    var cssText = "#weixin-tip{position: fixed; left:0; top:0; background: rgba(0,0,0,0.8); filter:alpha(opacity=80); width: 100%; height:100%; z-index: 100;} #weixin-tip p{text-align: center; margin-top: 10%; padding:0 5%;}";
+    if(isWeixin){
+        loadHtml();
+        loadStyleText(cssText);
+    }
+</script>
+
 <!--[if lt IE 8]>
 <div class="browsehappy" role="dialog">
     当前网页 <strong>不支持</strong> 你正在使用的浏览器. 为了正常的访问, 请 <a href="http://browsehappy.com/" target="_blank">升级你的浏览器</a>。
@@ -111,7 +154,7 @@
 			
             <div class="post-list-item">
 				<div class="post-list-item-container">
-					<div class="item-thumb bg-red" style="background-image:url(/images/thumbs/12.jpg);"></div>
+					<div class="item-thumb bg-red" style="background-image:url(/images/thumbs/15.jpg);"></div>
 					<a href="/2019/12/08/xingjitansuo/">
                         <div class="item-desc">
                             
@@ -119,7 +162,7 @@
                             
 						</div>
 					</a>
-					<div class="item-slant reverse-slant bg-red"></div>
+					<div class="item-slant reverse-slant bg-orange"></div>
 					<div class="item-slant"></div>
 					<div class="item-label">
 						<div class="item-title"><a href="/2019/12/08/xingjitansuo/">星际探索</a></div>
@@ -131,7 +174,7 @@
 								</span>
 							</div>
 							
-                            <div class="item-meta-ico bg-ico-chat" style="background: url(/images/bg-ico.png) no-repeat;background-size: 40px auto;"></div>
+                            <div class="item-meta-ico bg-ico-code" style="background: url(/images/bg-ico.png) no-repeat;background-size: 40px auto;"></div>
                             <div class="item-meta-cat">
                                 
                                 <a href="/categories/科幻/">科幻</a>
@@ -147,7 +190,7 @@
 			
             <div class="post-list-item">
 				<div class="post-list-item-container">
-					<div class="item-thumb bg-purple" style="background-image:url(/images/thumbs/7.jpg);"></div>
+					<div class="item-thumb bg-purple" style="background-image:url(/images/thumbs/13.jpg);"></div>
 					<a href="/2019/12/04/shaoniandeni/">
                         <div class="item-desc">
                             
@@ -155,7 +198,7 @@
                             
 						</div>
 					</a>
-					<div class="item-slant reverse-slant bg-purple"></div>
+					<div class="item-slant reverse-slant bg-green"></div>
 					<div class="item-slant"></div>
 					<div class="item-label">
 						<div class="item-title"><a href="/2019/12/04/shaoniandeni/">少年的你</a></div>
@@ -167,7 +210,7 @@
 								</span>
 							</div>
 							
-                            <div class="item-meta-ico bg-ico-note" style="background: url(/images/bg-ico.png) no-repeat;background-size: 40px auto;"></div>
+                            <div class="item-meta-ico bg-ico-book" style="background: url(/images/bg-ico.png) no-repeat;background-size: 40px auto;"></div>
                             <div class="item-meta-cat">
                                 
                                 <a href="/categories/青春/">青春</a>
@@ -207,7 +250,7 @@
 								</span>
 							</div>
 							
-                            <div class="item-meta-ico bg-ico-lock" style="background: url(/images/bg-ico.png) no-repeat;background-size: 40px auto;"></div>
+                            <div class="item-meta-ico bg-ico-design" style="background: url(/images/bg-ico.png) no-repeat;background-size: 40px auto;"></div>
                             <div class="item-meta-cat">
                                 
                                 <a href="/categories/剧情/">剧情</a>
@@ -233,7 +276,7 @@
                             
 						</div>
 					</a>
-					<div class="item-slant reverse-slant bg-red"></div>
+					<div class="item-slant reverse-slant bg-blue"></div>
 					<div class="item-slant"></div>
 					<div class="item-label">
 						<div class="item-title"><a href="/2019/10/24/luoxiaoheizhanji/">罗小黑战记</a></div>
@@ -245,7 +288,7 @@
 								</span>
 							</div>
 							
-                            <div class="item-meta-ico bg-ico-link" style="background: url(/images/bg-ico.png) no-repeat;background-size: 40px auto;"></div>
+                            <div class="item-meta-ico bg-ico-note" style="background: url(/images/bg-ico.png) no-repeat;background-size: 40px auto;"></div>
                             <div class="item-meta-cat">
                                 
                                 <a href="/categories/动画/">动画</a>
@@ -261,32 +304,32 @@
 			
             <div class="post-list-item">
 				<div class="post-list-item-container">
-					<div class="item-thumb bg-red" style="background-image:url(https://p0.meituan.net/movie/bec5446261ec09aaeae91fe7d96dfdfc163346.jpg);"></div>
-					<a href="/2019/10/22/joker/">
+					<div class="item-thumb bg-blue" style="background-image:url(https://p0.meituan.net/movie/ba41eaf25fa10c65e92329cf5d3167a910268940.jpg);"></div>
+					<a href="/2019/10/22/songwoshangqingyun/">
                         <div class="item-desc">
                             
                             <p>
 简介
-马丁·斯科塞斯将制片人身份参与DC角色“小丑”的单人电影。华纳选择托德·菲利普斯（《宿醉》系列、《单身男子俱乐部》）执导，斯科特·西尔弗...</p>
+盛男（姚晨 饰），女，独立上进有追求，渴望真爱却仍孑然一身。一次意外发现自己患上了卵巢癌，需要进行手术，但父亲出轨，母亲幼稚，家庭给不了...</p>
                             
 						</div>
 					</a>
-					<div class="item-slant reverse-slant bg-purple"></div>
+					<div class="item-slant reverse-slant bg-blue"></div>
 					<div class="item-slant"></div>
 					<div class="item-label">
-						<div class="item-title"><a href="/2019/10/22/joker/">小丑</a></div>
+						<div class="item-title"><a href="/2019/10/22/songwoshangqingyun/">送我上青云</a></div>
 						<div class="item-meta clearfix">
 							
 							<div class="item-meta-date" style="color: #313131; padding-top: 10px; font-size: 13px;">
-								<span id="/2019/10/22/joker/" class="leancloud-visitors" data-flag-title="小丑">
+								<span id="/2019/10/22/songwoshangqingyun/" class="leancloud-visitors" data-flag-title="送我上青云">
 									<span class="leancloud-visitors-count">0</span> Views 
 								</span>
 							</div>
 							
-                            <div class="item-meta-ico bg-ico-image" style="background: url(/images/bg-ico.png) no-repeat;background-size: 40px auto;"></div>
+                            <div class="item-meta-ico bg-ico-link" style="background: url(/images/bg-ico.png) no-repeat;background-size: 40px auto;"></div>
                             <div class="item-meta-cat">
                                 
-                                <a href="/categories/动作/">动作</a>
+                                <a href="/categories/剧情/">剧情</a>
 								
                             </div>
 						</div>
@@ -309,7 +352,7 @@
                             
 						</div>
 					</a>
-					<div class="item-slant reverse-slant bg-red"></div>
+					<div class="item-slant reverse-slant bg-blue"></div>
 					<div class="item-slant"></div>
 					<div class="item-label">
 						<div class="item-title"><a href="/2019/10/22/yinhebuxiban/">银河补习班</a></div>
@@ -337,7 +380,45 @@
 			
             <div class="post-list-item">
 				<div class="post-list-item-container">
-					<div class="item-thumb bg-red" style="background-image:url(https://p1.meituan.net/movie/36b6c8f22eb9caa138cdf6f106b560b5857917.jpg);"></div>
+					<div class="item-thumb bg-purple" style="background-image:url(https://p0.meituan.net/movie/005955214d5b3e50c910d7a511b0cb571445301.jpg);"></div>
+					<a href="/2019/10/22/nezha/">
+                        <div class="item-desc">
+                            
+                            <p>
+简介
+天地灵气孕育出一颗能量巨大的混元珠，元始天尊将混元珠提炼成灵珠和魔丸，灵珠投胎为人，助周伐纣时可堪大用；而魔丸则会诞出魔王，为祸人间。元...</p>
+                            
+						</div>
+					</a>
+					<div class="item-slant reverse-slant bg-red"></div>
+					<div class="item-slant"></div>
+					<div class="item-label">
+						<div class="item-title"><a href="/2019/10/22/nezha/">哪吒之魔童降世</a></div>
+						<div class="item-meta clearfix">
+							
+							<div class="item-meta-date" style="color: #313131; padding-top: 10px; font-size: 13px;">
+								<span id="/2019/10/22/nezha/" class="leancloud-visitors" data-flag-title="哪吒之魔童降世">
+									<span class="leancloud-visitors-count">0</span> Views 
+								</span>
+							</div>
+							
+                            <div class="item-meta-ico bg-ico-book" style="background: url(/images/bg-ico.png) no-repeat;background-size: 40px auto;"></div>
+                            <div class="item-meta-cat">
+                                
+                                <a href="/categories/动画/">动画</a>
+								
+                            </div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			
+        
+			
+            <div class="post-list-item">
+				<div class="post-list-item-container">
+					<div class="item-thumb bg-purple" style="background-image:url(https://p1.meituan.net/movie/36b6c8f22eb9caa138cdf6f106b560b5857917.jpg);"></div>
 					<a href="/2019/10/22/mofangyouxi/">
                         <div class="item-desc">
                             
@@ -347,7 +428,7 @@
                             
 						</div>
 					</a>
-					<div class="item-slant reverse-slant bg-green"></div>
+					<div class="item-slant reverse-slant bg-orange"></div>
 					<div class="item-slant"></div>
 					<div class="item-label">
 						<div class="item-title"><a href="/2019/10/22/mofangyouxi/">模仿游戏</a></div>
@@ -359,7 +440,7 @@
 								</span>
 							</div>
 							
-                            <div class="item-meta-ico bg-ico-design" style="background: url(/images/bg-ico.png) no-repeat;background-size: 40px auto;"></div>
+                            <div class="item-meta-ico bg-ico-link" style="background: url(/images/bg-ico.png) no-repeat;background-size: 40px auto;"></div>
                             <div class="item-meta-cat">
                                 
                                 <a href="/categories/剧情/">剧情</a>
@@ -375,70 +456,32 @@
 			
             <div class="post-list-item">
 				<div class="post-list-item-container">
-					<div class="item-thumb bg-blue" style="background-image:url(https://p0.meituan.net/movie/ba41eaf25fa10c65e92329cf5d3167a910268940.jpg);"></div>
-					<a href="/2019/10/22/songwoshangqingyun/">
+					<div class="item-thumb bg-yellow" style="background-image:url(https://p0.meituan.net/movie/bec5446261ec09aaeae91fe7d96dfdfc163346.jpg);"></div>
+					<a href="/2019/10/22/joker/">
                         <div class="item-desc">
                             
                             <p>
 简介
-盛男（姚晨 饰），女，独立上进有追求，渴望真爱却仍孑然一身。一次意外发现自己患上了卵巢癌，需要进行手术，但父亲出轨，母亲幼稚，家庭给不了...</p>
+马丁·斯科塞斯将制片人身份参与DC角色“小丑”的单人电影。华纳选择托德·菲利普斯（《宿醉》系列、《单身男子俱乐部》）执导，斯科特·西尔弗...</p>
                             
 						</div>
 					</a>
 					<div class="item-slant reverse-slant bg-purple"></div>
 					<div class="item-slant"></div>
 					<div class="item-label">
-						<div class="item-title"><a href="/2019/10/22/songwoshangqingyun/">送我上青云</a></div>
+						<div class="item-title"><a href="/2019/10/22/joker/">小丑</a></div>
 						<div class="item-meta clearfix">
 							
 							<div class="item-meta-date" style="color: #313131; padding-top: 10px; font-size: 13px;">
-								<span id="/2019/10/22/songwoshangqingyun/" class="leancloud-visitors" data-flag-title="送我上青云">
+								<span id="/2019/10/22/joker/" class="leancloud-visitors" data-flag-title="小丑">
 									<span class="leancloud-visitors-count">0</span> Views 
 								</span>
 							</div>
 							
-                            <div class="item-meta-ico bg-ico-design" style="background: url(/images/bg-ico.png) no-repeat;background-size: 40px auto;"></div>
+                            <div class="item-meta-ico bg-ico-chat" style="background: url(/images/bg-ico.png) no-repeat;background-size: 40px auto;"></div>
                             <div class="item-meta-cat">
                                 
-                                <a href="/categories/剧情/">剧情</a>
-								
-                            </div>
-						</div>
-					</div>
-				</div>
-			</div>
-			
-			
-        
-			
-            <div class="post-list-item">
-				<div class="post-list-item-container">
-					<div class="item-thumb bg-red" style="background-image:url(https://p0.meituan.net/movie/f75fcb7696d55452e32794b2219700b9840805.jpg);"></div>
-					<a href="/2019/10/22/liehuoyingxiong/">
-                        <div class="item-desc">
-                            
-                            <p>
-简介
-滨港市海港码头发生管道爆炸，整个罐区的原油都顺着A01油罐往外流，化成火海和阵阵爆炸，威胁全市、全省，甚至邻国的安全。慌乱的市民们四处奔...</p>
-                            
-						</div>
-					</a>
-					<div class="item-slant reverse-slant bg-purple"></div>
-					<div class="item-slant"></div>
-					<div class="item-label">
-						<div class="item-title"><a href="/2019/10/22/liehuoyingxiong/">烈火英雄</a></div>
-						<div class="item-meta clearfix">
-							
-							<div class="item-meta-date" style="color: #313131; padding-top: 10px; font-size: 13px;">
-								<span id="/2019/10/22/liehuoyingxiong/" class="leancloud-visitors" data-flag-title="烈火英雄">
-									<span class="leancloud-visitors-count">0</span> Views 
-								</span>
-							</div>
-							
-                            <div class="item-meta-ico bg-ico-game" style="background: url(/images/bg-ico.png) no-repeat;background-size: 40px auto;"></div>
-                            <div class="item-meta-cat">
-                                
-                                <a href="/categories/剧情/">剧情</a>
+                                <a href="/categories/动作/">动作</a>
 								
                             </div>
 						</div>
@@ -486,7 +529,7 @@
                         <p id="chakhsu"></p>
                     	<p>Theme is <a href="https://github.com/cccyb/hexo-theme-pinghsu" target="_blank">Pinghsu</a> by <a href="https://m.wiredtiger.org" target="_blank">小H</a></p>
 						<p>Powered by <a href="https://hexo.io/" target="_blank" rel="nofollow">hexo</a></p>
-                        <p style="margin-top: 10px">站点总字数：23.2k</p>
+                        <p style="margin-top: 10px">站点总字数：23.1k</p>
                         
                        
                         

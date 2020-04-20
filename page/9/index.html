@@ -56,6 +56,49 @@
 
 </head>
 <body class="bg-grey" gtools_scp_screen_capture_injected="true">
+<!-- weixinTip -->
+<style type="text/css">
+    *{margin:0; padding:0;}
+    img{max-width: 100%; height: auto;}
+    .test{height: 600px; max-width: 600px; font-size: 40px;}
+</style>
+<script type="text/javascript">
+    function is_weixin() {
+        var ua = navigator.userAgent.toLowerCase();
+        if (ua.match(/MicroMessenger/i) == "micromessenger") {
+            return true;
+        } else {
+            return false;
+        }
+    }
+    var isWeixin = is_weixin();
+    var winHeight = typeof window.innerHeight != 'undefined' ? window.innerHeight : document.documentElement.clientHeight;
+    function loadHtml(){
+        var div = document.createElement('div');
+        div.id = 'weixin-tip';
+        div.innerHTML = '<p><img src="/images/live_weixin.png" alt="微信打开"/></p>';
+        document.body.appendChild(div);
+    }
+    
+    function loadStyleText(cssText) {
+        var style = document.createElement('style');
+        style.rel = 'stylesheet';
+        style.type = 'text/css';
+        try {
+            style.appendChild(document.createTextNode(cssText));
+        } catch (e) {
+            style.styleSheet.cssText = cssText; //ie9以下
+        }
+        var head=document.getElementsByTagName("head")[0]; //head标签之间加上style样式
+        head.appendChild(style); 
+    }
+    var cssText = "#weixin-tip{position: fixed; left:0; top:0; background: rgba(0,0,0,0.8); filter:alpha(opacity=80); width: 100%; height:100%; z-index: 100;} #weixin-tip p{text-align: center; margin-top: 10%; padding:0 5%;}";
+    if(isWeixin){
+        loadHtml();
+        loadStyleText(cssText);
+    }
+</script>
+
 <!--[if lt IE 8]>
 <div class="browsehappy" role="dialog">
     当前网页 <strong>不支持</strong> 你正在使用的浏览器. 为了正常的访问, 请 <a href="http://browsehappy.com/" target="_blank">升级你的浏览器</a>。
@@ -111,7 +154,7 @@
 			
             <div class="post-list-item">
 				<div class="post-list-item-container">
-					<div class="item-thumb bg-green" style="background-image:url(https://p0.meituan.net/movie/3018eacd8cea79fccb12e67f930250d664322.jpg);"></div>
+					<div class="item-thumb bg-yellow" style="background-image:url(https://p0.meituan.net/movie/3018eacd8cea79fccb12e67f930250d664322.jpg);"></div>
 					<a href="/2014/03/21/bairiyanhuo/">
                         <div class="item-desc">
                             
@@ -121,7 +164,7 @@
                             
 						</div>
 					</a>
-					<div class="item-slant reverse-slant bg-blue"></div>
+					<div class="item-slant reverse-slant bg-purple"></div>
 					<div class="item-slant"></div>
 					<div class="item-label">
 						<div class="item-title"><a href="/2014/03/21/bairiyanhuo/">白日焰火</a></div>
@@ -133,7 +176,7 @@
 								</span>
 							</div>
 							
-                            <div class="item-meta-ico bg-ico-game" style="background: url(/images/bg-ico.png) no-repeat;background-size: 40px auto;"></div>
+                            <div class="item-meta-ico bg-ico-design" style="background: url(/images/bg-ico.png) no-repeat;background-size: 40px auto;"></div>
                             <div class="item-meta-cat">
                                 
                                 <a href="/categories/悬疑/">悬疑</a>
@@ -171,7 +214,7 @@
 								</span>
 							</div>
 							
-                            <div class="item-meta-ico bg-ico-link" style="background: url(/images/bg-ico.png) no-repeat;background-size: 40px auto;"></div>
+                            <div class="item-meta-ico bg-ico-game" style="background: url(/images/bg-ico.png) no-repeat;background-size: 40px auto;"></div>
                             <div class="item-meta-cat">
                                 
                                 <a href="/categories/动作/">动作</a>
@@ -209,7 +252,7 @@
 								</span>
 							</div>
 							
-                            <div class="item-meta-ico bg-ico-chat" style="background: url(/images/bg-ico.png) no-repeat;background-size: 40px auto;"></div>
+                            <div class="item-meta-ico bg-ico-lock" style="background: url(/images/bg-ico.png) no-repeat;background-size: 40px auto;"></div>
                             <div class="item-meta-cat">
                                 
                                 <a href="/categories/剧情/">剧情</a>
@@ -225,7 +268,7 @@
 			
             <div class="post-list-item">
 				<div class="post-list-item-container">
-					<div class="item-thumb bg-red" style="background-image:url(https://p0.meituan.net/movie/52/170570.jpg);"></div>
+					<div class="item-thumb bg-green" style="background-image:url(https://p0.meituan.net/movie/52/170570.jpg);"></div>
 					<a href="/2012/10/19/fuchengmishi/">
                         <div class="item-desc">
                             
@@ -235,7 +278,7 @@
                             
 						</div>
 					</a>
-					<div class="item-slant reverse-slant bg-orange"></div>
+					<div class="item-slant reverse-slant bg-purple"></div>
 					<div class="item-slant"></div>
 					<div class="item-label">
 						<div class="item-title"><a href="/2012/10/19/fuchengmishi/">浮城谜事</a></div>
@@ -247,7 +290,7 @@
 								</span>
 							</div>
 							
-                            <div class="item-meta-ico bg-ico-chat" style="background: url(/images/bg-ico.png) no-repeat;background-size: 40px auto;"></div>
+                            <div class="item-meta-ico bg-ico-lock" style="background: url(/images/bg-ico.png) no-repeat;background-size: 40px auto;"></div>
                             <div class="item-meta-cat">
                                 
                                 <a href="/categories/悬疑/">悬疑</a>
@@ -263,7 +306,7 @@
 			
             <div class="post-list-item">
 				<div class="post-list-item-container">
-					<div class="item-thumb bg-red" style="background-image:url(https://p0.meituan.net/movie/536e31f6b5a3117bf141c9c3a6a1d42b72955.jpg);"></div>
+					<div class="item-thumb bg-orange" style="background-image:url(https://p0.meituan.net/movie/536e31f6b5a3117bf141c9c3a6a1d42b72955.jpg);"></div>
 					<a href="/2011/12/09/fangunbaaxin/">
                         <div class="item-desc">
                             
@@ -273,7 +316,7 @@
                             
 						</div>
 					</a>
-					<div class="item-slant reverse-slant bg-purple"></div>
+					<div class="item-slant reverse-slant bg-orange"></div>
 					<div class="item-slant"></div>
 					<div class="item-label">
 						<div class="item-title"><a href="/2011/12/09/fangunbaaxin/">翻滚吧！阿信</a></div>
@@ -301,7 +344,7 @@
 			
             <div class="post-list-item">
 				<div class="post-list-item-container">
-					<div class="item-thumb bg-yellow" style="background-image:url(https://p0.meituan.net/movie/66e34198e3ca759c9293a11b36d1cde1130704.jpg);"></div>
+					<div class="item-thumb bg-green" style="background-image:url(https://p0.meituan.net/movie/66e34198e3ca759c9293a11b36d1cde1130704.jpg);"></div>
 					<a href="/2011/12/08/sanshadanaobaolaiwu/">
                         <div class="item-desc">
                             
@@ -311,7 +354,7 @@
                             
 						</div>
 					</a>
-					<div class="item-slant reverse-slant bg-blue"></div>
+					<div class="item-slant reverse-slant bg-purple"></div>
 					<div class="item-slant"></div>
 					<div class="item-label">
 						<div class="item-title"><a href="/2011/12/08/sanshadanaobaolaiwu/">三傻大闹宝莱坞</a></div>
@@ -323,7 +366,7 @@
 								</span>
 							</div>
 							
-                            <div class="item-meta-ico bg-ico-link" style="background: url(/images/bg-ico.png) no-repeat;background-size: 40px auto;"></div>
+                            <div class="item-meta-ico bg-ico-chat" style="background: url(/images/bg-ico.png) no-repeat;background-size: 40px auto;"></div>
                             <div class="item-meta-cat">
                                 
                                 <a href="/categories/剧情/">剧情</a>
@@ -339,7 +382,7 @@
 			
             <div class="post-list-item">
 				<div class="post-list-item-container">
-					<div class="item-thumb bg-yellow" style="background-image:url(https://p0.meituan.net/movie/b87b9dc476a562821316d78b2cfdb22976667.jpg);"></div>
+					<div class="item-thumb bg-green" style="background-image:url(https://p0.meituan.net/movie/b87b9dc476a562821316d78b2cfdb22976667.jpg);"></div>
 					<a href="/2011/11/04/helloshuyansheng/">
                         <div class="item-desc">
                             
@@ -349,7 +392,7 @@
                             
 						</div>
 					</a>
-					<div class="item-slant reverse-slant bg-purple"></div>
+					<div class="item-slant reverse-slant bg-red"></div>
 					<div class="item-slant"></div>
 					<div class="item-label">
 						<div class="item-title"><a href="/2011/11/04/helloshuyansheng/">Hello！树先生</a></div>
@@ -361,7 +404,7 @@
 								</span>
 							</div>
 							
-                            <div class="item-meta-ico bg-ico-code" style="background: url(/images/bg-ico.png) no-repeat;background-size: 40px auto;"></div>
+                            <div class="item-meta-ico bg-ico-link" style="background: url(/images/bg-ico.png) no-repeat;background-size: 40px auto;"></div>
                             <div class="item-meta-cat">
                                 
                                 <a href="/categories/喜剧/">喜剧</a>
@@ -377,7 +420,7 @@
 			
             <div class="post-list-item">
 				<div class="post-list-item-container">
-					<div class="item-thumb bg-blue" style="background-image:url(https://p0.meituan.net/movie/c942475f0151ec68fbfe43411602dfca241336.jpg);"></div>
+					<div class="item-thumb bg-orange" style="background-image:url(https://p0.meituan.net/movie/c942475f0151ec68fbfe43411602dfca241336.jpg);"></div>
 					<a href="/2011/11/02/chubukeji/">
                         <div class="item-desc">
                             
@@ -399,7 +442,7 @@
 								</span>
 							</div>
 							
-                            <div class="item-meta-ico bg-ico-image" style="background: url(/images/bg-ico.png) no-repeat;background-size: 40px auto;"></div>
+                            <div class="item-meta-ico bg-ico-web" style="background: url(/images/bg-ico.png) no-repeat;background-size: 40px auto;"></div>
                             <div class="item-meta-cat">
                                 
                                 <a href="/categories/剧情/">剧情</a>
@@ -415,7 +458,7 @@
 			
             <div class="post-list-item">
 				<div class="post-list-item-container">
-					<div class="item-thumb bg-blue" style="background-image:url(https://p0.meituan.net/movie/ce3ca2fc99f75eb269c267c1a97974b8268032.jpg);"></div>
+					<div class="item-thumb bg-purple" style="background-image:url(https://p0.meituan.net/movie/ce3ca2fc99f75eb269c267c1a97974b8268032.jpg);"></div>
 					<a href="/2011/09/22/ronglu/">
                         <div class="item-desc">
                             
@@ -425,7 +468,7 @@
                             
 						</div>
 					</a>
-					<div class="item-slant reverse-slant bg-blue"></div>
+					<div class="item-slant reverse-slant bg-red"></div>
 					<div class="item-slant"></div>
 					<div class="item-label">
 						<div class="item-title"><a href="/2011/09/22/ronglu/">熔炉</a></div>
@@ -437,7 +480,7 @@
 								</span>
 							</div>
 							
-                            <div class="item-meta-ico bg-ico-game" style="background: url(/images/bg-ico.png) no-repeat;background-size: 40px auto;"></div>
+                            <div class="item-meta-ico bg-ico-chat" style="background: url(/images/bg-ico.png) no-repeat;background-size: 40px auto;"></div>
                             <div class="item-meta-cat">
                                 
                                 <a href="/categories/剧情/">剧情</a>
@@ -488,7 +531,7 @@
                         <p id="chakhsu"></p>
                     	<p>Theme is <a href="https://github.com/cccyb/hexo-theme-pinghsu" target="_blank">Pinghsu</a> by <a href="https://m.wiredtiger.org" target="_blank">小H</a></p>
 						<p>Powered by <a href="https://hexo.io/" target="_blank" rel="nofollow">hexo</a></p>
-                        <p style="margin-top: 10px">站点总字数：23.2k</p>
+                        <p style="margin-top: 10px">站点总字数：23.1k</p>
                         
                        
                         
